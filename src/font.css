@@ -1,0 +1,33 @@
+:root {
+  --font-primary: "Seoge WP", "Tahoma", sans-serif;
+  --font-display: "Seoge WP", "Tahoma", sans-serif;
+  --font-headline: "Seoge WP", "Tahoma", sans-serif;
+  --font-code: "Courier New", monospace;
+}
+
+[class^="markdown-"] [class^="codeInline-"],
+[class^="codeLine-"],
+[class^="codeBlockText-"],
+[class^="durationTimeDisplay-"],
+[class^="durationTimeSeparator-"],
+[class*="after_inlineCode-"],
+[class*="before_inlineCode-"],
+[class^="inlineCode-"],
+code.inline,
+code,
+.hljs {
+  font-family: var(--font-code) !important;
+}
+
+.hljs,
+code.inline,
+[class^="markdown-"] code,
+[class^="markdown-"] [class^="codeInline-"],
+[class^="codeBlockText-"],
+[class^="codeLine-"],
+[class*="after_inlineCode-"],
+[class*="before_inlineCode-"],
+[class^="inlineCode-"],
+.hljs-ansi-control-sequence {
+  font-size: 12px !important;
+}

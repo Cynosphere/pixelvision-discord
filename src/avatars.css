@@ -1,0 +1,112 @@
+[class*="avatar-"],
+[class*="avatar-"] [class*="image-"],
+[class*="callAvatar-"],
+[class*="callAvatar-"] [class*="speaking-"],
+[class*="avatarDefault-"],
+[class*="avatarSpeaking-"],
+[class*="avatar-"] [class*="inner-"],
+[class*="callAvatarVoice-"],
+[class*="callAvatarWrapper-"] [class*="speaking-"],
+[class^="messagesWrapper-"]
+  [class^="scrollerInner-"]
+  [class^="message-"]
+  [class*="header-"]
+  [class*="avatar-"]
+  [class*="large-"],
+[class^="messagesWrapper-"]
+  [class^="scrollerInner-"]
+  [class^="message-"]
+  [class*="header-"]
+  [class*="avatar-"]
+  [class*="wrapper-"],
+[class^="messagesWrapper-"]
+  [class^="scrollerInner-"]
+  [class^="message-"]
+  [class*="contents-"]
+  [class*="avatar-"],
+[class^="messagesWrapper-"]
+  [class^="scrollerInner-"]
+  [class^="wrapper-"]
+  [class*="contents-"]
+  [class*="avatar-"],
+[class^="messageGroupCozy-"] [class*="contents-"] [class*="avatar-"],
+[class*="autocomplete-"]
+  [class*="autocompleteInner-"]
+  [class*="autocompleteRow-"]
+  [class*="content-"]
+  [class*="wrapper-"],
+[class*="guildsWrapper-"]
+  [class*="guilds-"]
+  [class*="guild-"]
+  [class*="guildInner-"],
+div[class^="listItem-"] foreignObject img,
+div[class^="listItem-"] foreignObject a[class^="button-"],
+div[class^="listItem-"] foreignObject [class^="childWrapper-"],
+div[class^="listItem-"] foreignObject [class^="folder-"],
+div[class^="listItem-"] div[class^="wrapperSimple-"],
+[class^="circleIconButton-"],
+[class^="folderIconWrapper-"],
+[class^="avatarContainer-"],
+[class^="executedCommandAvatar-"] {
+  border-radius: 0 !important;
+}
+
+[class^="folderIconWrapper-"]
+  > [class^="closedFolderIconWrapper-"]
+  > [class^="icon-"] {
+  border-radius: 0 !important;
+}
+
+[class*="avatarMasked-"],
+[class*="maskProfile-"],
+[class*="mask-"],
+[class*="avatar-"] svg[class*="mask-"] > foreignObject,
+[class*="avatarWrapper-"] svg[class*="mask-"] > foreignObject,
+[class*="avatarHint-"] > foreignObject,
+[class*="wrapper-"] svg[class*="mask-"] > foreignObject,
+[class*="callAvatarWrapper-"] svg[class*="callAvatarMask-"] > foreignObject,
+div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
+[class^="bannerSVGWrapper-"] > foreignObject,
+[class^="avatarDecoration-"] > foreignObject {
+  mask: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+}
+
+[class*="avatarHint-"],
+[class*="avatarNormal-"],
+[class*="avatarWrapper-"] [class*="wrapper-"],
+[class*="avatarWrapper-"] [class*="image-"],
+[class*="replyAvatar-"] {
+  border: none;
+  border-radius: 0 !important;
+}
+
+[class^="userPopout-"] [class*="avatarWrapper-"] > [class^="avatarHint-"] {
+  display: none;
+}
+
+[class^="userPopout-"]
+  [class*="avatarWrapper-"]
+  > [class^="avatar-"]
+  > svg
+  > foreignObject {
+  x: 8px;
+}
+
+[class^="userPopout-"]
+  [class*="avatarWrapper-"]
+  > [class^="avatar-"]
+  > svg
+  > rect {
+  x: 0;
+  y: 0;
+  width: 8px;
+  height: 100%;
+  mask: none !important;
+}
+
+[class^="accountProfileCard-"] [class^="avatar-"] {
+  border: 0;
+  background-color: transparent;
+}

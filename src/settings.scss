@@ -1,0 +1,125 @@
+@use "images";
+@use "colors";
+
+[class*="baseLayer-"] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+[class^="layer-"]:has([class^="standardSidebarView-"]) {
+  transform: none !important;
+  z-index: 100;
+  background: transparent;
+}
+[class^="layer-"] [class^="standardSidebarView-"] {
+  width: 740px;
+  height: 650px;
+  left: calc(50vw - 370px);
+  top: calc(50vh - 325px);
+  padding: 10px;
+  padding-top: 36px;
+  background-color: colors.$DialogBG;
+  border: solid 1px black;
+
+  &::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    height: 26px;
+    width: 738px;
+    background: images.$FrameTitle;
+    background-repeat: repeat-x;
+  }
+  &::after {
+    content: "Settings";
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    height: 26px;
+    width: 64px;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    color: colors.$LabelDisabled;
+    text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
+      0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+
+    :root.app-focused & {
+      color: colors.$TextHover;
+    }
+  }
+
+  & > [class^="sidebarRegion-"] {
+    flex: 1 0 180px;
+
+    [class^="sidebar-"] {
+      width: 164px;
+      padding: 0;
+
+      [class*="item-"] {
+        font-size: 16px;
+        padding: 2px 8px;
+        border-radius: 0px;
+        margin: 0;
+        color: colors.$Text2;
+
+        &:hover:not([class*="selected-"]) {
+          background-color: transparent !important;
+          color: colors.$Text2;
+        }
+
+        &[class*="selected-"] {
+          color: colors.$TextSelected !important;
+          background-color: colors.$Focus;
+        }
+      }
+    }
+
+    & > [class^="sidebarRegionScroller-"] {
+      background: transparent !important;
+    }
+  }
+
+  & > [class^="contentRegion-"] {
+    border: solid 1px colors.$Divider;
+    background: colors.$PropertySheetBG;
+
+    [class^="contentRegionScroller-"] {
+      background: transparent;
+    }
+
+    [class^="contentColumn"] {
+      max-width: 520px;
+      padding: 20px;
+    }
+
+    [class^="toolsContainer-"] {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+
+      [class^="keybind-"] {
+        display: none;
+      }
+
+      [class^="closeButton-"] {
+        position: absolute;
+        right: -544px;
+        top: -32px;
+        width: 16px;
+        height: 16px;
+        border: none;
+        border-radius: 0;
+        background-image: images.$TitlebarButtons;
+
+        &:hover {
+          background-position: 16px 0px;
+          background-color: transparent;
+        }
+
+        & > svg {
+          display: none;
+        }
+      }
+    }
+  }
+}

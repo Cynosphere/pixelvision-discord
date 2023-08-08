@@ -1,0 +1,227 @@
+@use "colors";
+@use "images";
+
+[class^="base-"]
+  > [class^="content-"]
+  > [class^="sidebar-"]
+  > [class^="container-"] {
+  background-color: colors.$PropertySheetBG;
+
+  [class^="sectionDivider-"] {
+    margin: 4px 2px !important;
+    background-color: colors.$Divider !important;
+  }
+
+  [class^="containerDefault-"] {
+    margin-left: 0;
+    padding: 0;
+
+    [class^="iconVisibility-"] {
+      margin-left: 0;
+      padding: 0;
+
+      [class^="link-"] {
+        border-radius: 0;
+        padding: 2px 4px;
+
+        [class^="icon-"] {
+          width: 16px;
+          height: 16px;
+        }
+
+        [class^="iconContainer-"] {
+          margin-right: 3px;
+        }
+
+        [class^="name-"] {
+          font-size: 12px;
+          color: colors.$LabelDisabled;
+          line-height: 16px;
+          font-weight: normal;
+        }
+
+        [class^="channelInfo-"] {
+          & > [class^="wrapper-"] {
+            border-radius: 0;
+            line-height: 16px;
+            height: 16px;
+
+            & > [class^="users-"] {
+              background-color: transparent;
+              color: colors.$Text;
+              padding-right: 6px;
+              width: unset;
+            }
+            & > [class^="total-"] {
+              background-color: transparent;
+              color: colors.$LabelDisabled;
+              padding: 0;
+
+              &::after {
+                content: "/";
+                border: none;
+                left: -4px;
+              }
+            }
+          }
+        }
+
+        .channel-typing-indicator {
+          padding: 0 !important;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &[class*="modeSelected-"] {
+        [class^="link-"] {
+          background-color: colors.$Focus;
+
+          [class^="name-"] {
+            color: white;
+          }
+        }
+      }
+      &[class*="modeUnread-"] {
+        [class^="link-"] [class^="name-"] {
+          color: colors.$Text;
+        }
+        &:hover [class^="link-"] [class^="name-"] {
+          color: white !important;
+        }
+      }
+      &:hover:not([class*="modeSelected-"]) {
+        [class^="link-"] {
+          background-color: transparent;
+          [class^="name-"] {
+            color: colors.$Label;
+          }
+        }
+      }
+
+      &[class*="clickable-"] {
+        height: 21px;
+        background: linear-gradient(to right, colors.$DialogBGL, transparent);
+
+        &:hover {
+          [class^="mainContent-"] > svg {
+            background-position-x: 16px;
+          }
+        }
+
+        &[class*="collapsed-"] {
+          [class^="mainContent-"] > svg {
+            background-position-y: 0px;
+          }
+        }
+
+        [class^="mainContent-"] {
+          height: 21px;
+
+          & > svg {
+            left: 3px;
+            top: 3px;
+            width: 16px;
+            height: 16px;
+            transition: none;
+            transform: none !important;
+            background-image: images.$CategoryArrow;
+            background-position: 0px 16px;
+
+            & > path {
+              display: none;
+            }
+          }
+
+          [class^="name-"] {
+            line-height: 21px;
+            font-weight: normal;
+            font-size: 12px;
+            margin-left: 23px;
+            text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
+              0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+          }
+        }
+      }
+    }
+
+    [class^="link-"] {
+      border-radius: 0;
+      padding: 2px 4px;
+
+      [class^="icon-"] {
+        width: 16px;
+        height: 16px;
+      }
+
+      [class^="iconContainer-"] {
+        margin-right: 3px;
+      }
+
+      [class^="name-"] {
+        font-size: 12px;
+        color: colors.$LabelDisabled;
+        line-height: 16px;
+        font-weight: normal;
+      }
+    }
+
+    &[class*="modeSelected-"] {
+      [class^="link-"] {
+        background-color: colors.$Focus;
+
+        [class^="name-"] {
+          color: white;
+        }
+      }
+    }
+    &[class*="modeUnread-"] {
+      [class^="link-"] [class^="name-"] {
+        color: colors.$Text;
+      }
+      &:hover [class^="link-"] [class^="name-"] {
+        color: white !important;
+      }
+    }
+    &:hover:not([class*="modeSelected-"]) {
+      [class^="link-"] {
+        background-color: transparent;
+        [class^="name-"] {
+          color: colors.$Label;
+        }
+      }
+    }
+
+    & > [class^="list-"] {
+      padding: 2px 4px;
+
+      & > [class^="draggable-"] {
+        height: unset;
+
+        & > [class^="voiceUser-"] {
+          height: unset;
+
+          &:hover > [class^="content-"] {
+            border-radius: 0;
+            background-color: transparent;
+          }
+
+          [class^="userAvatar-"] {
+            margin: 0;
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+          }
+
+          [class*="username-"] {
+            font-size: 12px;
+          }
+
+          [class^="icons-"] {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

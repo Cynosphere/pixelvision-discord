@@ -1,0 +1,86 @@
+@use "colors";
+@use "images";
+
+#app-mount {
+  border: 1px solid black;
+  width: calc(100vw - 2px);
+  height: calc(100vh - 2px);
+}
+
+[class^="typeWindows-"] {
+  height: 26px !important;
+  margin-top: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAaCAIAAAAfT2rCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADQSURBVChTVY7LCsIwEEXvB6gbRUV892Vrm9a2pvGtuHMhgq4U3Ljy/3/AG1IKQjicuZMZBu/P9/Z4Hc6X6/2JJFduIOKsWO1OcHwh0kJtj6wRazvFmXJ9AbU5sra9kIRYSBrJFJY3N0YiSpY0cuoGKNYHbU5AIozzieOTTDG2ZzS52pOYi2ypduTI8pCrbRClQ45HKc+JekOL5JFo93QamtUTLl1IstUdoDJSd4wxRWVlhza2/WanX87QWPMcnZUzJjM//2dq9Ub1ECayfIn8AUkpNYSqFKSjAAAAAElFTkSuQmCC");
+  background-repeat: repeat-x;
+
+  [class^="wordmarkWindows-"] {
+    padding: 0;
+
+    & > svg {
+      display: none;
+    }
+
+    &::after {
+      content: "Discord";
+      position: relative;
+      left: 8px;
+      top: 7px;
+      height: 26px;
+      width: 64px;
+      font-family: var(--font-primary);
+      font-size: 12px;
+      color: colors.$LabelDisabled;
+      text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
+        0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+  }
+
+  [class*="winButton-"] {
+    top: 0;
+    height: 16px;
+    width: 16px;
+    margin-left: 2px;
+    margin-top: 4px;
+    background-image: images.$TitlebarButtons;
+
+    & > svg {
+      display: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &[class*="winButtonClose-"] {
+      background-position: 0px 0px;
+      margin-right: 3px;
+
+      &:hover,
+      &:active {
+        background-position: 16px 0px;
+      }
+    }
+
+    &[class*="winButtonMinMax-"]:nth-child(4) {
+      background-position: 0px 16px;
+
+      &:hover,
+      &:active {
+        background-position: 16px 16px;
+      }
+    }
+
+    &[class*="winButtonMinMax-"]:nth-child(3) {
+      background-position: 0px 32px;
+
+      &:hover,
+      &:active {
+        background-position: 16px 32px;
+      }
+    }
+  }
+}

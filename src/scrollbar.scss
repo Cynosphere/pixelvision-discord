@@ -1,0 +1,44 @@
+@use "images";
+@use "colors";
+
+::-webkit-scrollbar {
+  min-width: 16px;
+  width: 16px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  background-image: images.$ScrollbarTrack !important;
+  background-repeat: repeat-y !important;
+  visibility: visible !important;
+}
+::-webkit-scrollbar-thumb {
+  border: none !important;
+  border-left: solid 4px transparent !important;
+  border-right: solid 3px transparent !important;
+  visibility: visible !important;
+  border-radius: 0 !important;
+  background-color: colors.$DarkB !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: colors.$DarkBHover !important;
+}
+::-webkit-scrollbar-button:single-button {
+  visibility: visible;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background-image: images.$ScrollbarDec;
+}
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: images.$ScrollbarDecHover;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background-image: images.$ScrollbarInc;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: images.$ScrollbarIncHover;
+}

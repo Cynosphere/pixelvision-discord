@@ -20,6 +20,11 @@
   background-color: colors.$DialogBG;
   border: solid 1px black;
 
+  [class^="separator-"] {
+    margin: 4px 2px !important;
+    background-color: colors.$Divider !important;
+  }
+
   &::before {
     position: absolute;
     top: 0px;
@@ -56,7 +61,7 @@
       padding: 0;
 
       [class*="item-"] {
-        font-size: 16px;
+        font-size: 12px;
         padding: 2px 8px;
         border-radius: 0px;
         margin: 0;
@@ -64,12 +69,25 @@
 
         &:hover:not([class*="selected-"]) {
           background-color: transparent !important;
-          color: colors.$Text2;
+          color: colors.$Text;
         }
 
         &[class*="selected-"] {
           color: colors.$TextSelected !important;
           background-color: colors.$Focus;
+        }
+      }
+
+      [class*="header-"] {
+        padding: 0;
+        height: 21px;
+        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+
+        & > [class*="headerText-"] {
+          line-height: 21px;
+          margin-left: 4px;
+          color: colors.$Label;
+          font-weight: normal;
         }
       }
     }

@@ -16,6 +16,10 @@
     margin-left: 0;
     padding: 0;
 
+    [class^="spine-"] {
+      display: none;
+    }
+
     [class^="iconVisibility-"] {
       margin-left: 0;
       padding: 0;
@@ -23,6 +27,7 @@
       [class^="link-"] {
         border-radius: 0;
         padding: 2px 4px;
+        --channel-icon: #{colors.$LabelDisabled};
 
         [class^="icon-"] {
           width: 16px;
@@ -76,6 +81,7 @@
       &[class*="modeSelected-"] {
         [class^="link-"] {
           background-color: colors.$Focus;
+          --channel-icon: white;
 
           [class^="name-"] {
             color: white;
@@ -83,16 +89,23 @@
         }
       }
       &[class*="modeUnread-"] {
-        [class^="link-"] [class^="name-"] {
-          color: colors.$Text;
+        [class^="link-"] {
+          --channel-icon: #{colors.$Text};
+          [class^="name-"] {
+            color: colors.$Text;
+          }
         }
-        &:hover [class^="link-"] [class^="name-"] {
-          color: white !important;
+        &:hover [class^="link-"] {
+          --channel-icon: white;
+          [class^="name-"] {
+            color: white !important;
+          }
         }
       }
       &:hover:not([class*="modeSelected-"]) {
         [class^="link-"] {
           background-color: transparent;
+          --channel-icon: #{colors.$Label};
           [class^="name-"] {
             color: colors.$Label;
           }
@@ -101,7 +114,7 @@
 
       &[class*="clickable-"] {
         height: 21px;
-        background: linear-gradient(to right, colors.$DialogBGL, transparent);
+        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
 
         &:hover {
           [class^="mainContent-"] > svg {
@@ -138,6 +151,7 @@
             font-weight: normal;
             font-size: 12px;
             margin-left: 23px;
+            color: colors.$Label;
             text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
               0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
           }
@@ -148,6 +162,7 @@
     [class^="link-"] {
       border-radius: 0;
       padding: 2px 4px;
+      --channel-icon: #{colors.$LabelDisabled};
 
       [class^="icon-"] {
         width: 16px;
@@ -169,6 +184,7 @@
     &[class*="modeSelected-"] {
       [class^="link-"] {
         background-color: colors.$Focus;
+        --channel-icon: white;
 
         [class^="name-"] {
           color: white;
@@ -176,16 +192,23 @@
       }
     }
     &[class*="modeUnread-"] {
-      [class^="link-"] [class^="name-"] {
-        color: colors.$Text;
+      [class^="link-"] {
+        --channel-icon: #{colors.$Text};
+        [class^="name-"] {
+          color: colors.$Text;
+        }
       }
-      &:hover [class^="link-"] [class^="name-"] {
-        color: white !important;
+      &:hover [class^="link-"] {
+        --channel-icon: white;
+        [class^="name-"] {
+          color: white !important;
+        }
       }
     }
-    &:hover:not([class*="modeSelected-"]) {
+    &:hover:not([class*="modeSelected-"]):not([class*="selected-"]) {
       [class^="link-"] {
         background-color: transparent;
+        --channel-icon: #{colors.$Label};
         [class^="name-"] {
           color: colors.$Label;
         }

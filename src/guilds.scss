@@ -1,0 +1,76 @@
+@use "colors";
+@use "images";
+
+@import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
+
+:root {
+	--HSL-server-icon-size: 32px;
+	--HSL-server-spacing: 8px;
+	--HSL-server-direction: column;
+	--HSL-server-alignment: flex-start;
+  --server-container: 40px !important;
+}
+
+#app-mount [class^="container-"]:has([class^="base-"]) {
+  background-color: colors.$PropertySheetBG;
+  background-image: images.$ClientHeader;
+  background-position-y: -32px;
+  background-repeat: repeat-x;
+
+  [class^="base-"] {
+    overflow: visible;
+  }
+
+  [class*="guilds-"] {
+    background-color: transparent;
+    height: calc(100vw - 232px) !important;
+
+    [class*="listItem-"]:not([class*="listItemWrapper-"]) {
+      margin: 0 !important;
+      margin-left: 4px !important;
+    }
+
+    [class^="scroller-"] {
+      padding: 0;
+
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-track,
+      &::-webkit-scrollbar-thumb,
+      &::-webkit-scrollbar-button {
+        min-width: 0 !important;
+        visibility: hidden !important;
+      }
+    }
+  }
+}
+
+[class^="panels-"] > [class^="container-"] {
+  position: absolute;
+  right: -5px;
+  top: -45px;
+  height: 34px;
+  padding: 0;
+  z-index: 20;
+  flex-direction: row-reverse;
+  background-color: transparent;
+
+  & > [class^="avatarWrapper-"] {
+    height: 34px;
+    flex-direction: row-reverse;
+    padding-left: 0;
+    margin-left: 0;
+    border-radius: 0;
+
+    &:hover {
+      background-color: colors.$darkblue;
+    }
+
+    & > [class^="nameTag-"] {
+      text-align: right;
+
+      & > [class^="panelSubtextContainer-"] > [class*="subtext-"] > [class^="hoverRoll"] {
+        text-align: right;
+      }
+    }
+  }
+}

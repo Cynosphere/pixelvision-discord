@@ -1,0 +1,163 @@
+section[class^="panels-"] > [class*="activityPanel-"] [class^="gameIcon-"],
+section[class^="panels-"]
+  > [class*="activityPanel-"]
+  [class^="actions-"]
+  > [class^="panelButtonContainer-"]
+  > button,
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class*="directionRow-"]
+  > button,
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="actionButtons-"]
+  button {
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+}
+
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class*="directionRow-"] {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: grid;
+  grid-gap: 4px;
+  grid-auto-flow: column;
+}
+
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div {
+  padding-left: 20px;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"] {
+  position: absolute;
+  left: 8px;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]:has(> :nth-child(2)) {
+  top: 12px;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]
+  > svg[class^="ping-"] {
+  margin-right: 0;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]
+  > [class^="labelWrapper-"],
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]
+  > [class^="labelWrapper-"]
+  > button {
+  width: 16px;
+  height: 16px;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]
+  > [class^="labelWrapper-"] {
+  position: relative;
+  left: -16px;
+  z-index: 10;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="connection-"]
+  > [class^="inner-"]
+  > div
+  > [class^="rtcConnectionStatus-"]
+  > [class^="labelWrapper-"]
+  > button
+  > [class^="contents-"] {
+  display: none;
+}
+
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="actionButtons-"]
+  button {
+  padding: 0;
+  background: transparent;
+}
+section[class^="panels-"]
+  > [class^="wrapper-"]
+  > [class^="container-"]
+  > [class*="actionButtons-"] {
+  grid-gap: 4px;
+  padding-top: 0;
+  grid-template-columns: repeat(auto-fill, minmax(0, 24px));
+  height: 24px;
+}
+
+.hh2-spotify-controls-player {
+  margin: 4px 4px !important;
+  height: 32px !important;
+}
+.hh2-spotify-controls-album-image {
+  width: 32px !important;
+  height: 32px !important;
+}
+button.hh2-spotify-controls-button {
+  width: 24px !important;
+}
+.hh2-spotify-controls-info-box {
+  margin-left: 4px !important;
+  max-width: 112px !important;
+  margin-right: 4px !important;
+}
+.hh2-spotify-controls-buttons {
+  display: grid !important;
+  grid-auto-flow: column;
+  grid-gap: 4px;
+}
+.hh2-spotify-controls-track-name {
+  font-size: 0.75em;
+}
+.hh2-spotify-controls-album-name span,
+.hh2-spotify-controls-album-name a {
+  color: var(--text-muted) !important;
+}

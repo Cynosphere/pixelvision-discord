@@ -9,73 +9,87 @@
     & > [class^="content-"] {
       [class^="sidebar-"] {
         overflow: visible;
-        margin-top: 28px;
+        background-color: transparent;
+        margin-top: 27px;
         margin-right: 7px;
-        box-shadow:
-          -1px -1px 0 black, -2px -2px 0 colors.$Divider,
-          1px -1px 0 black, 2px -2px 0 colors.$Divider,
-          -1px 1px 0 black, -2px 2px 0 colors.$Divider,
-          1px 1px 0 black, 2px 2px 0 colors.$Divider;
 
-        [class^="container-"][aria-label] > [class^="container"][class*="clickable-"] {
-          position: absolute;
-          top: -30px;
-          left: -2px;
-          height: 22px;
-          width: 244px;
-          background-color: colors.$PropertySheetBG;
+        [class^="container-"][aria-label] {
+          box-shadow:
+            -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+            1px -1px 0 black, 2px -2px 0 colors.$Divider,
+            -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+            1px 1px 0 black, 2px 2px 0 colors.$Divider;
 
-          & > header {
-            padding: 0 4px;
+          & > [class^="container"][class*="clickable-"] {
+            position: absolute;
+            top: -29px;
+            left: -2px;
             height: 22px;
-
-            & > [class^="headerContent-"] {
-              filter: none;
-              text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
-                0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
-
-              & > [class*="name-"] {
-                font-size: 12px;
-                font-weight: normal;
-                padding-left: 4px;
-              }
-
-              & > [class^="guildIconV2Container-"] {
-                margin-right: 4px;
-              }
-            }
-          }
-
-          & > [class^="animatedContainer-"] {
             width: 244px;
-            height: 22px;
-            transform: none !important;
-            opacity: 1 !important;
+            background-color: colors.$PropertySheetBG;
 
-            & > [class^="bannerImage-"] {
-              width: 244px;
-              top: -78px;
-              transform: none !important;
+            & > header {
+              padding: 0 4px;
+              height: 22px;
 
-              & > img {
-                width: 244px;
+              & > [class^="headerContent-"] {
+                filter: none;
+                text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
+                  0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+
+                & > [class*="name-"] {
+                  font-size: 12px;
+                  font-weight: normal;
+                  padding-left: 4px;
+                }
+
+                & > [class^="guildIconV2Container-"] {
+                  margin-right: 4px;
+                }
               }
+            }
 
-              &::after {
-                content: "";
-                height: 22px;
+            & > [class^="animatedContainer-"] {
+              width: 244px;
+              height: 22px;
+              transform: none !important;
+              opacity: 1 !important;
+
+              & > [class^="bannerImage-"] {
                 width: 244px;
-                top: 0;
-                left: 0;
-                position: absolute;
-                background: linear-gradient(
-                  0deg,
-                  transparent 0%
-                  colors.$PropertySheetBG 95%,
-                );
+                top: -78px;
+                transform: none !important;
+
+                & > img {
+                  width: 244px;
+                }
+
+                &::after {
+                  content: "";
+                  height: 22px;
+                  width: 244px;
+                  top: 0;
+                  left: 0;
+                  position: absolute;
+                  background: linear-gradient(
+                    0deg,
+                    transparent 0%
+                    colors.$PropertySheetBG 95%,
+                  );
+                }
               }
             }
           }
+        }
+
+        & > [class^="panels-"]:has(> :nth-child(3)) {
+          margin-top: 7px;
+          background-color: colors.$PropertySheetBG;
+          box-shadow:
+            -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+            1px -1px 0 black, 2px -2px 0 colors.$Divider,
+            -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+            1px 1px 0 black, 2px 2px 0 colors.$Divider;
         }
 
         & > [class^="privateChannels-"] {
@@ -83,7 +97,7 @@
 
           & > [class^="searchBar-"] {
             position: absolute;
-            top: -30px;
+            top: -29px;
             left: -2px;
             height: 22px;
             width: 244px;
@@ -121,12 +135,12 @@
 
       [class^="chat-"] {
         overflow: visible;
-        margin-top: 28px;
+        margin-top: 27px;
         background-color: transparent;
 
         & > [class^="title-"] {
           position: absolute;
-          top: -30px;
+          top: -29px;
           left: -2px;
           height: 22px;
           background-color: colors.$PropertySheetBG;
@@ -283,6 +297,156 @@
               1px -1px 0 black, 2px -2px 0 colors.$Divider,
               -1px 1px 0 black, -2px 2px 0 colors.$Divider,
               1px 1px 0 black, 2px 2px 0 colors.$Divider;
+          }
+        }
+      }
+
+      & > [class^="container-"] {
+        overflow: visible;
+        margin-top: 27px;
+        background-color: transparent;
+
+        & > section[class*="container-"] {
+          position: absolute;
+          top: -2px;
+          height: 22px;
+          background-color: colors.$PropertySheetBG;
+          padding: 0 4px;
+          width: calc(100vw - 261px);
+          --channel-icon: #{colors.$Text};
+
+          &::before {
+            display: none;
+          }
+
+          [class*="iconWrapper-"] {
+            margin: 0 2px;
+            display: flex;
+            align-items: center;
+
+            & > svg {
+              width: 16px;
+              height: 16px;
+            }
+
+            & > [class*="count-"] {
+              font-size: 12px;
+            }
+          }
+
+          & > [class^="children-"] {
+            height: 22px;
+
+            &::after{
+              display: none;
+            }
+
+            & > [class^="titleWrapper-"] > [class*="title-"] {
+              font-size: 12px;
+              font-weight: normal;
+              color: colors.$Text;
+            }
+
+            & > [class^="divider-"] {
+              display: none;
+            }
+          }
+          & > [class^="toolbar-"] {
+            height: 22px;
+
+            [class^="divider-"] {
+              display: none;
+            }
+          }
+        }
+
+        & > [class*="scrollerBase-"] {
+          background-color: colors.$PropertySheetBG;
+          box-shadow:
+            -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+            1px -1px 0 black, 2px -2px 0 colors.$Divider,
+            -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+            1px 1px 0 black, 2px 2px 0 colors.$Divider;
+
+          [class^="stickyHeader-"] {
+            background-color: colors.$PropertySheetBG;
+          }
+        }
+
+        & > [class^="tabBody-"] {
+          overflow: visible;
+
+          &::before {
+            display: none;
+          }
+
+          & > [class*="peopleColumn-"] {
+            background-color: colors.$PropertySheetBG;
+            box-shadow:
+              -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+              1px -1px 0 black, 2px -2px 0 colors.$Divider,
+              -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+              1px 1px 0 black, 2px 2px 0 colors.$Divider;
+          }
+
+          & > [class*="nowPlayingColumn-"] {
+            margin-left: 7px;
+            background-color: colors.$PropertySheetBG;
+            box-shadow:
+              -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+              1px -1px 0 black, 2px -2px 0 colors.$Divider,
+              -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+              1px 1px 0 black, 2px 2px 0 colors.$Divider;
+
+            & > [class^="container-"] {
+              background-color: transparent;
+
+              & > [class^="scroller-"] {
+                border-left: none;
+              }
+            }
+          }
+        }
+      }
+
+      & > [class^="applicationStore-"] {
+        margin-top: 27px;
+        background-color: transparent;
+        box-shadow:
+          -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+          1px -1px 0 black, 2px -2px 0 colors.$Divider,
+          -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+          1px 1px 0 black, 2px 2px 0 colors.$Divider;
+
+        section[class*="container-"] {
+          position: absolute;
+          top: -2px;
+          height: 22px;
+          background-color: colors.$PropertySheetBG;
+          padding: 0 4px;
+          width: calc(100vw - 261px);
+          --channel-icon: #{colors.$Text};
+
+          &::before {
+            display: none;
+          }
+
+          & > [class^="children-"] {
+            height: 22px;
+
+            &::after{
+              display: none;
+            }
+
+            & > [class^="titleWrapper-"] > [class*="title-"] {
+              font-size: 12px;
+              font-weight: normal;
+              color: colors.$Text;
+            }
+
+            & > [class^="divider-"] {
+              display: none;
+            }
           }
         }
       }

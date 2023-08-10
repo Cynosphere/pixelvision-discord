@@ -1,0 +1,118 @@
+@use "colors";
+@use "images";
+@use "styling";
+
+#splash {
+  font-family: var(--font-primary);
+  border: 1px solid black;
+  background-color: #151719;
+  background-image: images.$Login;
+  background-repeat: no-repeat;
+  background-position: calc(100vw - 105px) calc(100vh - 75px);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 26px;
+    width: 100vw;
+    background: images.$FrameTitle;
+    background-repeat: repeat-x;
+  }
+  &::after {
+    content: "Discord";
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    height: 26px;
+    width: 64px;
+    font-family: var(--font-primary);
+    font-size: 12px;
+    color: colors.$TextHover;
+    text-shadow: styling.$TextShadow;
+  }
+
+  .splash-inner {
+    position: absolute;
+    top: 50px;
+    left: 26px;
+
+    video {
+      display: none;
+    }
+
+    .splash-text {
+      top: 0;
+
+      & > span.splash-status {
+        font-family: var(--font-primary);
+        font-size: 12px;
+        line-height: 16px;
+        color: colors.$Label;
+      }
+    }
+  }
+}
+
+[class^="app-"] + [class^="container-"] {
+  background-color: colors.$DialogBG;
+
+  & > [class^="content-"] {
+    border: 1px solid black;
+    width: 382px;
+    height: 104px;
+    background-color: #151719;
+    background-image: images.$Login;
+    background-repeat: no-repeat;
+    background-position: 277px 29px;
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      top: calc(50vh - 44px);
+      left: calc(50vw - 192px);
+      content: "";
+      height: 26px;
+      width: 382px;
+      background: images.$FrameTitle;
+      background-repeat: repeat-x;
+    }
+    &::after {
+      content: "Discord";
+      position: absolute;
+      top: calc(50vh - 44px + 7px);
+      left: calc(50vw - 192px + 7px);
+      height: 26px;
+      width: 64px;
+      font-family: var(--font-primary);
+      font-size: 12px;
+      color: colors.$LabelDisabled;
+      text-shadow: styling.$TextShadow;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+
+    & > video {
+      display: none;
+    }
+
+    & > [class^="text-"] {
+      top: 45px;
+      left: 25px;
+
+      & > [class^="tip-"] {
+        font-size: 12px;
+        line-height: 16px;
+        color: colors.$Label;
+      }
+
+      & > [class^="tipTitle-"],
+      & > [class^="body-"] {
+        display: none;
+      }
+    }
+  }
+}

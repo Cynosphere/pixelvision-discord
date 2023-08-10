@@ -75,6 +75,10 @@
       [class^="upperBadge-"] {
         z-index: 500;
       }
+
+      [class^="lowerBadge-"] > [class^="numberBadge-"] {
+        background-color: colors.$Highlight1 !important;
+      }
     }
 
     [class^="blobContainer-"]:hover:not([class*="selected-"]) {
@@ -101,8 +105,35 @@
       }
     }
 
-    [class^="listItemWrapper-"] [class^="wrapper-"] > [class^="childWrapper-"] {
-      background-color: transparent;
+    [class^="blobContainer-"]:has([class^="numberBadge-"]) {
+      & > [class^="wrapper-"] {
+        filter: drop-shadow(0 0 4px colors.$Highlight1) !important;
+      }
+    }
+
+    [class^="listItemWrapper-"] [class^="wrapper-"] {
+      & > [class^="childWrapper-"] {
+        background-color: transparent;
+
+        & > svg[class^="homeIcon-"] {
+          width: 25px;
+          height: 25px;
+          background-image: images.$HomeIcon;
+
+          & > path {
+            display: none;
+          }
+        }
+      }
+      &[class*="selected-"] {
+        &:hover {
+          filter: drop-shadow(0 0 4px colors.$Text) !important;
+        }
+
+        & > [class^="childWrapper-"] > svg[class^="homeIcon-"] {
+          background-image: images.$HomeIconHover;
+        }
+      }
     }
 
     [class^="guildSeparator-"] {

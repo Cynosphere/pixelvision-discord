@@ -171,20 +171,23 @@
           }
         }
 
-        [class^="addButtonIcon-"] {
-          width: 16px;
-          height: 16px;
-          transition: none;
-          transform: none !important;
-          background-image: images.$ButtonAdd;
-          margin-right: 0;
+        [class^="addButton-"] {
+          min-width: 20px;
+          [class^="addButtonIcon-"] {
+            width: 16px;
+            height: 16px;
+            transition: none;
+            transform: none !important;
+            background-image: images.$ButtonAdd;
+            margin-right: 0;
 
-          &:hover {
-            background-position-x: 16px;
-          }
+            &:hover {
+              background-position-x: 16px;
+            }
 
-          & > polygon {
-            display: none;
+            & > polygon {
+              display: none;
+            }
           }
         }
       }

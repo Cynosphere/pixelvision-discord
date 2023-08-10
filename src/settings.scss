@@ -108,6 +108,30 @@
     [class^="contentColumn"] {
       max-width: 520px;
       padding: 20px;
+
+      [class^="sectionTitle-"] {
+        border: 1px solid colors.$BackgroundStart;
+        background-color: colors.$BackgroundStart;
+        background-image: images.$HeaderBG;
+        background-repeat: repeat-x;
+        box-shadow: styling.$BorderInverse;
+        height: 20px;
+
+        & > h2 {
+          font-size: 16px;
+          line-height: 16px;
+          margin-left: 2px;
+          color: colors.$GameDetails;
+        }
+
+        & + [class^="children-"] {
+          padding: 8px;
+          margin-top: 5px;
+          border: 1px solid colors.$BackgroundStart;
+          background-color: colors.$BackgroundStart;
+          box-shadow: styling.$BorderInverse;
+        }
+      }
     }
 
     [class^="toolsContainer-"] {

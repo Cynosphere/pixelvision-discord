@@ -1,5 +1,6 @@
 @use "colors";
 @use "images";
+@use "styling";
 
 [class*="baseLayer-"] > [class^="container-"] {
   [class^="base-"] {
@@ -91,8 +92,7 @@
                   font-weight: normal;
                   font-size: 12px;
                   color: colors.$Label;
-                  text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
-                    0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+                  text-shadow: styling.$TextShadow;
                   margin-left: 5px;
                 }
 

@@ -25,16 +25,69 @@
     background-color: transparent;
     height: calc(100vw - 232px) !important;
 
-    [class*="listItem-"]:not([class*="listItemWrapper-"]) {
-      margin: 0 !important;
-      margin-left: 4px !important;
+    [class*="listItem-"] {
+      &:not([class*="listItemWrapper-"]) {
+        margin: 0 !important;
+        margin-left: 4px !important;
+      }
+
+      &:hover [class^="pill-"] {
+        display: none;
+
+        span {
+          opacity: 0 !important;
+        }
+      }
+      [class^="pill-"] {
+        width: 32px !important;
+        height: 32px !important;
+        top: 0px !important;
+        left: -14px;
+        z-index: 100;
+
+        & > span {
+          display: none;
+
+          &[style*="height: 8px;"] {
+            display: block;
+            right: 1px;
+            top: 1px;
+            height: 8px !important;
+            width: 8px !important;
+            border-radius: 100% !important;
+            transform: none !important;
+            z-index: 100;
+            background: white;
+            filter: drop-shadow(0 0 2px colors.$TextH);
+          }
+        }
+      }
+
+      &:not(:hover) [class^="pill-"] span {
+        opacity: 0 !important;
+
+        &[style^="opacity: 0.7"],
+        &[style^="opacity: 1"] {
+          opacity: 1 !important;
+        }
+      }
+
+      [class^="upperBadge-"] {
+        z-index: 500;
+      }
+    }
+
+    [class^="blobContainer-"]:hover:not([class*="selected-"]) {
+      & > [class^="wrapper-"] {
+        filter: drop-shadow(0 0 4px colors.$Text) !important;
+      }
     }
 
     [class^="blobContainer-"][class*="selected-"],
     [class^="listItemWrapper-"][class*="selected-"] {
 
       & > [class^="wrapper-"] {
-        filter: drop-shadow(0 0 2px white);
+        filter: drop-shadow(0 0 4px white);
       }
 
       &:after {

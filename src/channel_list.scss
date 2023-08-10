@@ -1,5 +1,6 @@
 @use "colors";
 @use "images";
+@use "styling";
 
 [class^="base-"]
   > [class^="content-"]
@@ -100,9 +101,18 @@
           }
         }
         &:hover [class^="link-"] {
-          --channel-icon: white;
+          --channel-icon: white !important;
           [class^="name-"] {
             color: white !important;
+          }
+        }
+      }
+      &[class*="modeMuted-"] {
+        [class^="link-"] {
+          --channel-icon: #{colors.$ScrollGlyphDisabled};
+          --interactive-muted: #{colors.$ScrollGlyphDisabled};
+          [class^="name-"] {
+            color: colors.$ScrollGlyphDisabled;
           }
         }
       }
@@ -110,6 +120,7 @@
         [class^="link-"] {
           background-color: transparent;
           --channel-icon: #{colors.$Label};
+          --interactive-muted: #{colors.$Label};
           [class^="name-"] {
             color: colors.$Label;
           }
@@ -156,8 +167,7 @@
             font-size: 12px;
             margin-left: 23px;
             color: colors.$Label;
-            text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
-              0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+            text-shadow: styling.$TextShadow;
           }
         }
 

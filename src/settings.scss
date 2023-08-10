@@ -1,5 +1,6 @@
 @use "images";
 @use "colors";
+@use "styling";
 
 [class*="baseLayer-"] {
   opacity: 1 !important;
@@ -45,8 +46,7 @@
     font-family: var(--font-primary);
     font-size: 12px;
     color: colors.$LabelDisabled;
-    text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
-      0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+    text-shadow: styling.$TextShadow;
 
     :root.app-focused & {
       color: colors.$TextHover;

@@ -1,0 +1,248 @@
+:root {
+  --black: rgba(0, 0, 0, 255);
+  --almostBlack: rgba(6, 7, 8, 255);
+  --white: rgba(255, 255, 255, 255);
+  --grey: rgba(158, 153, 149, 255);
+  --none: rgba(0, 0, 0, 0);
+  --yellow: rgba(255, 255, 0, 255);
+  --offwhite: rgba(166, 164, 159, 255);
+  --dullgreen: rgba(216, 222, 211, 255);
+  --maize: rgba(203, 191, 87, 255);
+  --red: rgba(255, 51, 51, 255);
+  --darkblue: rgba(0, 85, 128, 255);
+  --blue: rgba(0, 133, 199, 255);
+  --darkred: rgba(128, 0, 0, 255);
+  --darkpurple: rgba(64, 0, 64, 255);
+
+  --dark_blue: rgba(27, 44, 61, 255);
+  --BlueBorder: rgba(26, 31, 40, 255);
+  --red_alpha1: rgba(255, 51, 51, 200);
+  --red_alpha2: rgba(255, 51, 51, 170);
+  --red_hover_alpha1: rgba(225, 51, 51, 200);
+  --red_hover_alpha2: rgba(225, 51, 51, 170);
+
+  --bordercolor: rgba(126, 130, 134, 255);
+  --darkcorner: rgba(71, 75, 79, 255);
+
+  --ButtonFace: rgba(69, 70, 70, 200);
+  --ButtonFace2: rgba(54, 58, 62, 255);
+  --ButtonFace3: rgba(59, 60, 61, 255);
+  --ButtonFaceHover: rgba(69, 70, 70, 240);
+  --ButtonFaceActive: rgba(69, 70, 70, 240);
+  --ButtonFaceFocus: rgba(69, 70, 70, 240);
+  --ButtonFaceActiveFocus: rgba(69, 70, 70, 255);
+
+  --ButtonBorder: rgba(76, 77, 76, 255);
+  --ButtonBorderPage: rgba(114, 119, 131, 255);
+  --ButtonBorderDisabled: rgba(41, 43, 43, 255);
+  --ButtonBorderDisabled2: rgb(31, 33, 34);
+  --ButtonBorderActive: rgba(104, 103, 100, 255);
+  --ButtonBorderFocus: rgba(117, 115, 112, 255);
+
+  --Text: rgba(199, 205, 219, 255);
+  --Text2: rgba(178, 182, 186, 255);
+  --TextDisabled: rgba(97, 101, 105, 255);
+  --TextHover: rgba(224, 228, 232, 255);
+  --TextSelected: rgba(236, 240, 244, 255);
+  --TextentrySelected: rgba(235, 239, 243, 235);
+  --TextSelectedBG: rgba(64, 89, 128, 255);
+  --TextGlowHover: rgba(122, 126, 130, 255);
+  --TextGlowSelected: rgba(166, 170, 174, 255);
+  --TextGlowHoverSm: rgba(121, 125, 129, 255);
+  --TextGlowSelectedSm: rgba(140, 144, 148, 255);
+
+  --NavLabel: rgba(149, 153, 158, 255);
+  --Label: rgba(150, 158, 174, 255);
+  --Label2: rgba(121, 126, 139, 255);
+  --LabelDisabled: rgba(104, 110, 122, 255);
+  --LabelFocus: rgba(194, 196, 199, 255);
+
+  --ScrollGlyph: rgba(158, 167, 186, 255);
+  --ScrollGlyphDisabled: rgba(72, 74, 77, 255);
+  --ScrollGlyphFocus: rgba(242, 242, 242, 255);
+  --ScrollBG: rgba(72, 74, 77, 255);
+
+  --HeaderClient: rgba(51, 55, 59, 255);
+  --HeaderDialog: rgba(90, 94, 98, 255);
+
+  --TitleBar: rgba(79, 83, 87, 50);
+  --TitleBarFocus: rgba(167, 171, 175, 50);
+
+  --Focus: rgba(49, 65, 89, 155);
+  --Focus2: rgba(85, 125, 171, 255);
+  --Focus3: rgba(62, 92, 133, 255);
+  --FocusGrid: rgba(85, 146, 160, 240);
+  --Highlight: rgba(81, 140, 170, 120);
+  --Highlight1: rgba(255, 154, 3, 255);
+  --Highlight2: rgba(252, 151, 0, 255);
+  --Highlight2r: rgba(0, 151, 252, 255);
+  --Highlight3: rgba(173, 69, 71, 255);
+  --Highlight5: rgba(77, 109, 140, 255);
+  --Highlight5a: rgba(83, 124, 166, 255);
+  --Highlight5b: rgba(59, 85, 98, 255);
+
+  --BackgroundStartSubtle: rgba(20, 22, 24, 155);
+  --BackgroundStart: rgba(12, 13, 14, 180);
+  --BackgroundStartOpaque: rgba(32, 36, 40, 255);
+
+  --ClientBG: rgba(0, 0, 0, 255);
+  --DialogBG: rgba(20, 22, 24, 255);
+  --DialogBGL: rgba(33, 37, 42, 255);
+
+  --DarkClientBG: rgba(32, 36, 40, 255);
+  --DarkDialogBG: rgba(20, 22, 24, 255);
+  --DarkClientBGTransparent: rgba(32, 36, 40, 19);
+  --DarkDialogBGTransparent: rgba(20, 22, 24, 170);
+
+  --GameDetailsBlueTransparent: rgba(80, 104, 130, 160);
+  --GameDetailsGreenTransparent: rgba(80, 104, 130, 160);
+  --GameDetailsRedTransparent: rgba(80, 104, 130, 160);
+
+  --GameDetailsBlue: rgba(80, 104, 130, 255);
+  --GameDetailsGreen: rgba(80, 104, 130, 255);
+  --GameDetailsRed: rgba(80, 104, 130, 255);
+
+  --PropertySheetBG: rgba(12, 13, 14, 255);
+  --InteriorColor: rgba(59, 63, 67, 255);
+
+  --DialogBorder: rgba(114, 118, 122, 255);
+
+  --FillBG1: rgba(59, 63, 67, 255);
+  --FillBG2: rgba(66, 70, 74, 255);
+
+  --MenuBG1: rgba(33, 37, 42, 255);
+  --MenuBG1Trans: rgba(33, 37, 42, 120);
+  --MenuBG2: rgba(56, 60, 64, 255);
+  --MenuBG2Trans: rgba(56, 60, 64, 255);
+
+  --Divider: rgba(60, 66, 72, 255);
+  --DividerD: rgba(16, 17, 18, 255);
+  --DividerL: rgba(46, 50, 56, 255);
+
+  --DarkImageBorder: rgba(47, 48, 43, 255);
+  --DarkImageOverlay: rgba(0, 0, 0, 80);
+
+  --inbox_active: rgba(158, 194, 29, 255);
+  --inbox_active2: rgba(155, 199, 9, 255);
+  --inbox_active4: rgba(122, 145, 71, 255);
+  --inbox_active5: rgba(85, 102, 47, 255);
+
+  --inbox_inactive: rgba(38, 38, 37, 255);
+  --inbox_inactive2: rgba(142, 194, 12, 255);
+  --inbox_inactive4: rgba(122, 145, 71, 255);
+  --inbox_inactive5: rgb(74, 102, 29);
+
+  --parental_lock_active1: rgba(138, 175, 6, 255);
+  --parental_lock_active2: rgba(49, 49, 49, 255);
+  --parental_lock_active4: rgba(122, 145, 71, 255);
+  --parental_lock_active5: rgba(85, 102, 47, 255);
+  --green5: rgba(131, 162, 15, 255);
+  --green6: rgba(106, 131, 12, 255);
+  --green7: rgba(58, 70, 13, 255);
+  --green8: rgba(38, 48, 2, 255);
+
+  --launch0: rgba(119, 215, 250, 255);
+  --launch1: rgba(83, 172, 204, 255);
+  --launch2: rgba(54, 125, 153, 255);
+
+  --parental_lock_inactive1: rgba(154, 49, 48, 255);
+  --parental_lock_inactive2: rgba(189, 79, 79, 255);
+  --parental_lock_inactive3: rgba(215, 90, 90, 255);
+  --parental_lock_inactive4: rgba(146, 72, 71, 255);
+  --parental_lock_inactive5: rgba(103, 48, 47, 255);
+  --red6: rgba(38, 1, 1, 255);
+
+  --Link: rgba(134, 181, 217, 255);
+  --TextHoverMenu: rgba(84, 146, 205, 255);
+
+  --BMask: rgba(5, 5, 5, 255);
+  --FriendBG: rgba(40, 44, 48, 77);
+  --ScreenB: rgba(60, 66, 72, 155);
+  --ScreenBTr: rgba(60, 66, 72, 77);
+  --ScreenB2: rgba(60, 66, 72, 125);
+  --ScreenB2Tr: rgba(60, 66, 72, 62);
+  --ScreenB3: rgba(34, 37, 40, 255);
+  --ScreenB4: rgba(42, 47, 51, 255);
+  --MultiplyB: rgba(17, 19, 20, 255);
+
+  --MoreB: rgba(94, 98, 110, 155);
+
+  --LightB: rgba(88, 94, 104, 255);
+  --LightBHover: rgba(98, 104, 114, 255);
+  --DarkB: rgba(64, 66, 71, 255);
+  --DarkBHover: rgba(74, 76, 81, 255);
+  --DarkerB: rgba(59, 61, 66, 255);
+  --BorderB1: rgba(118, 124, 136, 255);
+  --BorderB2: rgba(80, 84, 93, 255);
+  --BorderB3: rgba(128, 134, 146, 255);
+  --BorderB4: rgba(39, 41, 46, 255);
+  --BorderB5: rgba(49, 51, 56, 255);
+
+  --MenuBG: rgba(30, 33, 36, 255);
+
+  --TextD: rgba(6, 7, 8, 255);
+  --TextH: rgba(23, 23, 25, 255);
+  --TextTitle: rgba(80, 104, 130, 255);
+
+  --BlackTr: rgba(0, 0, 0, 125);
+  --BlackTr1: rgba(0, 0, 0, 170);
+  --BlackTr2: rgba(0, 0, 0, 215);
+  --BlackTr3: rgba(0, 0, 0, 235);
+
+  --ClientHBG: rgba(20, 23, 26, 255);
+  --BorderL: rgba(35, 39, 43, 255);
+  --BorderD: rgba(15, 17, 19, 255);
+
+  --PShade1: rgba(19, 21, 23, 255);
+  --PShade2: rgba(18, 20, 22, 255);
+  --PShade3: rgba(16, 18, 20, 255);
+  --PShade4: rgba(14, 15, 17, 255);
+  --PShade5: rgba(11, 12, 13, 255);
+
+  --DividerD2: rgba(16, 18, 21, 255);
+  --DividerL2: rgba(39, 43, 48, 255);
+  --DialogBGL: rgba(33, 37, 42, 255);
+
+  --Focus4: rgba(50, 64, 84, 255);
+  --DivCnr: rgba(40, 44, 48, 255);
+
+  --DividerD2: rgba(16, 18, 21, 255);
+  --DividerL2: rgba(39, 43, 48, 255);
+  --DialogBGL: rgba(33, 37, 42, 255);
+
+  --Shade1: rgba(32, 36, 41, 255);
+  --Shade2: rgba(31, 35, 40, 255);
+  --Shade3: rgba(30, 34, 38, 255);
+  --Shade4: rgba(29, 33, 37, 255);
+  --Shade5: rgba(27, 31, 35, 255);
+  --Shade6: rgba(26, 29, 33, 255);
+  --Shade7: rgba(25, 28, 32, 255);
+  --Shade8: rgba(24, 27, 30, 255);
+
+  --BackgroundOverlay: rgba(12, 13, 14, 96);
+
+  --ClayBG: rgba(70, 70, 70, 255);
+  --ClayButtonBG: rgba(87, 88, 88, 255);
+  --ClayEnabled: rgba(85, 88, 82, 255);
+  --ClayKeyFocus: rgba(89, 92, 77, 255);
+  --ClayMouseDown: rgba(85, 85, 85, 255);
+  --ClayDisabledText: rgba(128, 134, 126, 255);
+  --ClayLightGreen: rgba(173, 181, 168, 255);
+  --ClayDimLightGreen: rgba(166, 172, 162, 255);
+  --LightClayBG: rgba(104, 106, 101, 255);
+  --LightClayButtonBG: rgba(125, 128, 120, 255);
+  --DarkClayBG: rgba(47, 49, 45, 255);
+  --p_ClayMouseDown: rgba(94, 94, 94, 255);
+  --ClaySheetBottom: rgba(92, 90, 87, 255);
+  --MaizeBG: rgba(145, 134, 60, 255);
+  --GreenBG: rgba(76, 88, 68, 255);
+  --LightGreenBG: rgba(90, 106, 80, 255);
+  --DarkGreenBG: rgba(62, 70, 55, 255);
+  --LightGrayBG: rgba(121, 126, 121, 255);
+  --GrayBG: rgba(77, 73, 71, 255);
+  --GrayBG2: rgba(39, 37, 35, 255);
+  --TempGradientTop: rgba(53, 52, 51, 255);
+
+  --DragDrop_DragFrame: rgba(255, 255, 255, 192);
+  --DragDrop_DropFrame: rgba(150, 255, 150, 255);
+}

@@ -1,0 +1,13 @@
+@use "colors";
+
+$Border: -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+  1px -1px 0 black, 2px -2px 0 colors.$Divider,
+  -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+  1px 1px 0 black, 2px 2px 0 colors.$Divider;
+$BorderInverse: -1px -1px 0 colors.$Divider, -2px -2px 0 black,
+  1px -1px 0 colors.$Divider, 2px -2px 0 black,
+  -1px 1px 0 colors.$Divider, -2px 2px 0 black,
+  1px 1px 0 colors.$Divider, 2px 2px 0 black;
+
+$TextShadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
+  0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;

@@ -5,7 +5,7 @@
   opacity: 1 !important;
   transform: none !important;
 }
-[class^="layer-"]:has([class^="standardSidebarView-"]) {
+[class^="layer-"]:has(> [class^="standardSidebarView-"]) {
   transform: none !important;
   z-index: 100;
   background: transparent;

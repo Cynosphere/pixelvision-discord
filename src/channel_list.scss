@@ -12,6 +12,10 @@
     background-color: colors.$Divider !important;
   }
 
+  [class^="spineBorder-"] {
+    display: none;
+  }
+
   [class^="containerDefault-"] {
     margin-left: 0;
     padding: 0;
@@ -154,6 +158,23 @@
             color: colors.$Label;
             text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
               0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
+          }
+        }
+
+        [class^="addButtonIcon-"] {
+          width: 16px;
+          height: 16px;
+          transition: none;
+          transform: none !important;
+          background-image: images.$ButtonAdd;
+          margin-right: 0;
+
+          &:hover {
+            background-position-x: 16px;
+          }
+
+          & > polygon {
+            display: none;
           }
         }
       }

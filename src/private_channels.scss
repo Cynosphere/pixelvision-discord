@@ -1,7 +1,7 @@
 @use "colors";
 @use "images";
 
-[class^="container-"]:has([class^="base-"]) {
+[class*="baseLayer-"] > [class^="container-"] {
   [class^="base-"] {
     & > [class^="content-"] {
       [class^="sidebar-"] {
@@ -58,8 +58,8 @@
                   }
 
                   &[class*="selected-"] {
+                    background-color: colors.$Focus;
                     [class^="link-"] {
-                      background-color: colors.$Focus;
                       --channel-icon: white;
 
                       [class^="name-"] {

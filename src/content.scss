@@ -1,9 +1,8 @@
 @use "colors";
 
-[class^="container-"]:has([class^="base-"]) {
+[class*="baseLayer-"] > [class^="container-"] {
   [class^="base-"] {
     padding: 7px;
-    padding-bottom: 27px;
     background-color: colors.$DialogBG;
 
     & > [class^="content-"] {
@@ -82,18 +81,28 @@
           }
         }
 
-        & > [class^="panels-"]:has(> :nth-child(3)) {
-          margin-top: 7px;
-          background-color: colors.$PropertySheetBG;
+        & > [class^="panels-"] {
+          &:has(> :nth-child(3)),
+          &:has(> [class^="wrapper-"]:not(:empty)) {
+            margin-top: 7px;
+            background-color: colors.$PropertySheetBG;
+            box-shadow:
+              -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+              1px -1px 0 black, 2px -2px 0 colors.$Divider,
+              -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+              1px 1px 0 black, 2px 2px 0 colors.$Divider;
+          }
+          & > [class^="wrapper-"] > [class^="container-"] {
+            background-color: colors.$PropertySheetBG;
+          }
+        }
+
+        & > [class^="privateChannels-"] {
           box-shadow:
             -1px -1px 0 black, -2px -2px 0 colors.$Divider,
             1px -1px 0 black, 2px -2px 0 colors.$Divider,
             -1px 1px 0 black, -2px 2px 0 colors.$Divider,
             1px 1px 0 black, 2px 2px 0 colors.$Divider;
-        }
-
-        & > [class^="privateChannels-"] {
-          overflow: visible;
 
           & > [class^="searchBar-"] {
             position: absolute;
@@ -105,8 +114,10 @@
             padding: 0;
 
             & > [class^="searchBarComponent-"] {
+              position: fixed;
               height: 22px;
-              background-color: transparent;
+              width: 244px;
+              background-color: colors.$PropertySheetBG;
               font-size: 12px;
               line-height: 22px;
             }
@@ -115,21 +126,6 @@
 
         ul[class^="content-"] > div[style="height: 84px;"] {
           height: 0px !important;
-        }
-
-        [class^="devBanner-"] {
-          position: absolute;
-          bottom: -25px;
-          left: 0;
-          background-color: transparent;
-          padding: 0;
-          text-shadow: 0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH,
-              0px 0px 4px colors.$TextH, 0px 0px 4px colors.$TextH;
-          color: colors.$Text;
-
-          & > [class^="closeButton-"] {
-            display: none;
-          }
         }
       }
 
@@ -217,6 +213,30 @@
                 -1px 1px 0 black, -2px 2px 0 colors.$Divider,
                 1px 1px 0 black, 2px 2px 0 colors.$Divider;
               margin-bottom: 15px;
+
+              [class^="channelTextArea-"] {
+                width: calc(100% - 4px);
+                border-radius: 0;
+                background-color: colors.$PropertySheetBG;
+                box-shadow:
+                  -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+                  1px -1px 0 black, 2px -2px 0 colors.$Divider,
+                  -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+                  1px 1px 0 black, 2px 2px 0 colors.$Divider;
+
+                & > [class^="scrollableContainer-"] {
+                  background-color: transparent;
+                  border-radius: 0;
+
+                  &::-webkit-scrollbar,
+                  &::-webkit-scrollbar-track,
+                  &::-webkit-scrollbar-thumb,
+                  &::-webkit-scrollbar-button {
+                    min-width: 0 !important;
+                    visibility: hidden !important;
+                  }
+                }
+              }
             }
 
             & > [class^="form-"] {
@@ -228,14 +248,10 @@
               }
 
               & > [class^="channelTextArea-"] {
+                background-color: transparent;
                 border-radius: 0;
-                background-color: colors.$PropertySheetBG;
-                box-shadow:
-                  -1px -1px 0 black, -2px -2px 0 colors.$Divider,
-                  1px -1px 0 black, 2px -2px 0 colors.$Divider,
-                  -1px 1px 0 black, -2px 2px 0 colors.$Divider,
-                  1px 1px 0 black, 2px 2px 0 colors.$Divider;
                 margin-bottom: 31px;
+                min-height: 32px !important;
 
                 &::after {
                   content: "";
@@ -252,8 +268,13 @@
                 }
 
                 & > [class^="scrollableContainer-"] {
-                  background-color: transparent;
                   border-radius: 0;
+                  background-color: colors.$PropertySheetBG;
+                  box-shadow:
+                    -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+                    1px -1px 0 black, 2px -2px 0 colors.$Divider,
+                    -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+                    1px 1px 0 black, 2px 2px 0 colors.$Divider;
 
                   &::-webkit-scrollbar,
                   &::-webkit-scrollbar-track,
@@ -263,6 +284,85 @@
                     visibility: hidden !important;
                   }
                 }
+
+                [class^="attachedBars-"] {
+                  background-color: colors.$PropertySheetBG;
+                  box-shadow:
+                    -1px -1px 0 black, -2px -2px 0 colors.$Divider,
+                    1px -1px 0 black, 2px -2px 0 colors.$Divider,
+                    -1px 1px 0 black, -2px 2px 0 colors.$Divider,
+                    1px 1px 0 black, 2px 2px 0 colors.$Divider;
+                  border-radius: 0;
+                  margin-bottom: 7px;
+                  margin-top: 5px;
+
+                  [class^="replyBar-"] {
+                    background-color: transparent;
+                    border-radius: 0;
+
+                    [class*="replyLabel-"] {
+                      margin-left: 4px;
+                    }
+
+                    [class*="mentionButton-"],
+                    [class*="closeButton-"] {
+                      padding: 2px 4px;
+                    }
+
+                    [class^="separator-"] {
+                      display: none;
+                    }
+                  }
+                }
+
+                [class^="inner-"] {
+                  padding-left: 0 !important;
+                }
+
+                [class^="inner-"],
+                [class^="buttons-"],
+                [class^="attachWrapper-"],
+                [class^="attachButton-"],
+                & > [class^="scrollableContainer-"],
+                [class^="inner-"] > [class^="textArea-"] {
+                  min-height: 32px !important;
+                }
+
+                [class^="buttons-"],
+                [class^="attachWrapper-"],
+                [class^="attachButton-"] {
+                  height: 32px !important;
+                }
+                [class^="inner-"] > [class^="textArea-"] {
+                  height: 32px;
+                }
+
+                [class^="attachWrapper-"] {
+                  min-width: 32px;
+                }
+                [class^="attachWrapper-"] [class^="attachButton-"] {
+                  margin-left: 0;
+                  padding-top: 0;
+                }
+                [class^="attachButton-"],
+                [class^="attachButton-"] > [class^="icon-"] {
+                  padding: 5px 8px;
+                }
+                [class^="buttons-"] [class*="buttonContainer-"] > button:not(:has(> [class*="innerButton-"])) {
+                  margin: 0;
+                }
+                [class^="buttons-"] > [class^="separator-"],
+                [class^="buttons-"] > [class^="separator-"] [class*="innerButton-"] {
+                  margin-left: 4px;
+                }
+                [class^="buttons-"] > [class^="separator-"] [class*="innerButton-"] {
+                  margin-right: 0;
+                }
+
+                & > [class^="scrollableContainer-"] > [class^="inner-"] > [class^="textArea-"] > div > [class*="fontSize16Padding-"] {
+                  padding-top: 4px !important;
+                  padding-bottom: 4px !important;
+                }
               }
 
               & > [class^="typing-"] {
@@ -271,6 +371,10 @@
                 right: 4px;
                 font-size: 12px;
               }
+            }
+
+            [class^="scrollerSpacer-"] {
+              height: 8px;
             }
           }
           & > [class^="container-"] {
@@ -305,6 +409,7 @@
         overflow: visible;
         margin-top: 27px;
         background-color: transparent;
+        width: calc(100vw - 263px);
 
         & > section[class*="container-"] {
           position: absolute;

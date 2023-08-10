@@ -11,7 +11,7 @@
   --server-container: 40px !important;
 }
 
-#app-mount [class^="container-"]:has([class^="base-"]) {
+#app-mount [class*="baseLayer-"] > [class^="container-"] {
   background-color: colors.$PropertySheetBG;
   background-image: images.$ClientHeader;
   background-position-y: -32px;
@@ -28,6 +28,32 @@
     [class*="listItem-"]:not([class*="listItemWrapper-"]) {
       margin: 0 !important;
       margin-left: 4px !important;
+    }
+
+    [class^="blobContainer-"][class*="selected-"],
+    [class^="listItemWrapper-"][class*="selected-"] {
+
+      & > [class^="wrapper-"] {
+        filter: drop-shadow(0 0 2px white);
+      }
+
+      &:after {
+        content: "";
+        width: 48px;
+        height: 24px;
+        background-image: images.$GuildSelected;
+        position: absolute;
+        bottom: -4px;
+        left: -8px;
+      }
+    }
+
+    [class^="listItemWrapper-"] [class^="wrapper-"] > [class^="childWrapper-"] {
+      background-color: transparent;
+    }
+
+    [class^="guildSeparator-"] {
+      display: none;
     }
 
     [class^="scroller-"] {

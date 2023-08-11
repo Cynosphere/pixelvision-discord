@@ -114,7 +114,8 @@ div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
 }
 
 [class^="avatar-"] > [class^="wrapper-"],
-[class^="avatarWrapper-"] > [class^="wrapper-"] {
+[class^="wrapper-"][class*="avatar-"],
+[class^="wrapper"][class*="Avatar-"] {
   --status-color: #5e626e;
 
   &:not(:has([mask="url(#svg-mask-avatar-default)"]))::after {

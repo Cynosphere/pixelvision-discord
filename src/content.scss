@@ -1,4 +1,5 @@
 @use "colors";
+@use "images";
 @use "styling";
 @use "sass:color";
 
@@ -236,6 +237,16 @@
                 &:before {
                   background-color: colors.$Highlight1;
                 }
+              }
+              [class^="message-"][class*="replying-"] {
+                background-color: color.adjust(colors.$Focus, $alpha: -0.5);
+                &:before {
+                  background-color: color.adjust(colors.$Focus, $alpha: 0.4);
+                }
+              }
+
+              [class^="divider-"] > [class^="content-"] {
+                background-color: colors.$PropertySheetBG;
               }
 
               [class^="channelTextArea-"] {
@@ -543,4 +554,147 @@
       }
     }
   }
+}
+
+[class^="messagesPopoutWrap-"] {
+  background-color: colors.$PropertySheetBG;
+  border: 1px solid black;
+  border-radius: 0;
+  max-height: calc(100vh - 128px) !important;
+
+  & > [class^="header-"] {
+    height: 26px;
+    min-height: 26px;
+    background: images.$FrameTitle;
+    background-repeat: repeat-x;
+    padding: 0;
+    margin-bottom: 4px;
+
+    & > h1 {
+      padding-top: 3px;
+      padding-left: 8px;
+      font-size: 12px;
+      color: colors.$LabelDisabled;
+      text-shadow: styling.$TextShadow;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+  }
+
+  [class^="messagesPopout-"] {
+    padding-right: 8px !important;
+
+    [class^="messageGroupWrapper-"] {
+      border-radius: 0;
+      border: 1px solid colors.$BackgroundStart;
+      background-color: colors.$BackgroundStart;
+      box-shadow: styling.$BorderInverse;
+    }
+  }
+}
+
+[class^="browser-"] {
+  background-color: colors.$PropertySheetBG;
+  border: 1px solid black;
+  border-radius: 0;
+  max-height: calc(100vh - 128px) !important;
+
+  & > [class^="header-"] {
+    height: 26px;
+    min-height: 26px;
+    background: images.$FrameTitle;
+    background-repeat: repeat-x;
+    padding: 0;
+
+    & > [class^="threadIcon-"] {
+      height: 16px;
+      width: 16px;
+      margin-right: 3px;
+      margin-left: 2px;
+      color: colors.$LabelDisabled;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+
+    & > [class^="divider-"],
+    & > [class^="spacer-"] {
+      display: none;
+    }
+
+    & > h1 {
+      font-size: 12px;
+      color: colors.$LabelDisabled;
+      text-shadow: styling.$TextShadow;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+
+    & > [class^="searchBox-"] {
+      border-radius: 0;
+      background-color: colors.$DialogBG;
+      border: 1px solid colors.$ScreenB;
+    }
+
+    & > [class^="closeIcon-"] {
+      width: 16px;
+      height: 16px;
+      border: none;
+      border-radius: 0;
+      background-image: images.$TitlebarButtons;
+      padding-right: 3px;
+
+      &:hover {
+        background-position: 16px 0px;
+        background-color: transparent;
+      }
+
+      & > svg {
+        display: none;
+      }
+    }
+  }
+
+  [class^="list"] {
+    padding: 0;
+
+    [class^="content-"] {
+      [class*="sectionHeader-"] {
+        height: 21px;
+        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+        margin: 0;
+        padding-left: 4px;
+      }
+
+      [class^="container-"] {
+        border-radius: 0;
+        border: 1px solid colors.$BackgroundStart;
+        background-color: colors.$BackgroundStart;
+        box-shadow: styling.$BorderInverse;
+        margin: 3px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+.inAppNotification-card {
+  background-color: colors.$PropertySheetBG !important;
+  box-shadow: styling.$Border;
+  border-radius: 0 !important;
+}
+
+[class^="inputDefault-"] {
+  border-radius: 0;
+  padding: 2px;
+  height: 22px;
+  border: 1px solid colors.$ScreenB;
+  background-color: colors.$DialogBG;
+  font-size: 12px;
+  line-height: 16px;
 }

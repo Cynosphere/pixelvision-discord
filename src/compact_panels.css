@@ -121,7 +121,6 @@ section[class^="panels-"]
   > [class*="actionButtons-"]
   button {
   padding: 0;
-  background: transparent;
 }
 section[class^="panels-"]
   > [class^="wrapper-"]

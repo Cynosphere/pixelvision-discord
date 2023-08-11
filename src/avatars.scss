@@ -1,3 +1,5 @@
+@use "colors";
+
 [class*="avatar-"],
 [class*="avatar-"] [class*="image-"],
 [class*="callAvatar-"],
@@ -110,3 +112,47 @@ div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
   border: 0;
   background-color: transparent;
 }
+
+[class^="avatar-"] > [class^="wrapper-"],
+[class^="avatarWrapper-"] > [class^="wrapper-"] {
+  --status-color: #5e626e;
+
+  &:not(:has([mask="url(#svg-mask-avatar-default)"]))::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-shadow: inset 0 0 0 1px var(--status-color), inset 0 0 0 2px black,
+      inset 0 0 2px 3px colors.$TextH;
+  }
+  & > svg > rect,
+  & > svg > svg[class^="cursorDefault-"] {
+    display: none;
+  }
+
+  &:has(rect[fill="#23a55a"]) {
+    --status-color: #95ff00;
+  }
+  &:has(rect[fill="#f0b232"]) {
+    --status-color: #{colors.$Highlight1};
+  }
+  &:has(rect[fill="#f23f43"]) {
+    --status-color: #d75a5a;
+  }
+}
+
+.platform-icons-wrapper > svg path {
+  &[fill="var(--green-360, var(--status-green-600))"] {
+    fill: #95ff00 !important;
+  }
+  &[fill="var(--yellow-300, var(--status-yellow-500))"] {
+    fill: colors.$Highlight1 !important;
+  }
+  &[fill="var(--red-400, var(--status-red-500))"] {
+    fill: #d75a5a !important;
+  }
+}
+

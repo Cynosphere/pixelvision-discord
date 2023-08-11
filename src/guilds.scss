@@ -78,6 +78,7 @@
 
       [class^="lowerBadge-"] > [class^="numberBadge-"] {
         background-color: colors.$Highlight1 !important;
+        z-index: 500;
       }
     }
 
@@ -95,6 +96,7 @@
       }
 
       &:after {
+        pointer-events: none;
         content: "";
         width: 48px;
         height: 24px;

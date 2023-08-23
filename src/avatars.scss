@@ -49,13 +49,11 @@ div[class^="listItem-"] div[class^="wrapperSimple-"],
 [class^="circleIconButton-"],
 [class^="folderIconWrapper-"],
 [class^="avatarContainer-"],
-[class^="executedCommandAvatar-"] {
-  border-radius: 0 !important;
-}
-
+[class^="executedCommandAvatar-"],
 [class^="folderIconWrapper-"]
   > [class^="closedFolderIconWrapper-"]
-  > [class^="icon-"] {
+  > [class^="icon-"],
+[class^="embedAuthorIcon-"] {
   border-radius: 0 !important;
 }
 
@@ -69,7 +67,8 @@ div[class^="listItem-"] div[class^="wrapperSimple-"],
 [class*="callAvatarWrapper-"] svg[class*="callAvatarMask-"] > foreignObject,
 div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
 [class^="bannerSVGWrapper-"] > foreignObject,
-[class^="avatarDecoration-"] > foreignObject {
+[class^="avatarDecoration-"] > foreignObject,
+[class^="viewers-"] > [class*="viewer-"] {
   mask: none !important;
   mask-image: none !important;
   -webkit-mask-image: none !important;

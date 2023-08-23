@@ -46,7 +46,7 @@
         margin-top: 27px;
         margin-right: 7px;
 
-        [class^="container-"][aria-label] {
+        & > [class^="container-"][aria-label] {
           box-shadow: styling.$Border;
 
           & > [class^="container"][class*="clickable-"] {
@@ -117,7 +117,8 @@
             background-color: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
           }
-          & > [class^="wrapper-"] > [class^="container-"] {
+          & > [class^="wrapper-"] > [class^="container-"],
+          & > [class*="activityPanel-"] {
             background-color: colors.$PropertySheetBG;
           }
         }
@@ -145,9 +146,27 @@
           }
         }
 
-        ul[class^="content-"] > div[style="height: 84px;"],
-        ul[class^="content-"] > div[style="height: 84px;"] + div[style="height: 12px;"] {
-          height: 0px !important;
+        ul[class^="content-"] {
+          & > div[style="height: 84px;"],
+          & > div[style="height: 84px;"] + div[style="height: 12px;"],
+          & > div[style="height: 0px;"] + div[style="height: 12px;"],
+          & > [class^="sectionDivider"] + div[style="height: 12px;"]  {
+            height: 0px !important;
+          }
+
+          & > [class*="containerWithMargin-"] {
+            margin-bottom: 4px;
+            padding: 0;
+
+            & > [class^="textArea-"] {
+              margin-right: 0;
+            }
+
+            &::after {
+              left: 2px;
+              border-color: colors.$ScreenB;
+            }
+          }
         }
       }
 
@@ -161,6 +180,7 @@
           top: -29px;
           left: -2px;
           height: 22px;
+          min-height: 22px;
           background-color: colors.$PropertySheetBG;
           padding: 0 4px;
           width: calc(100% + 4px);
@@ -181,38 +201,279 @@
             }
           }
 
-          & > [class^="children-"] {
+          & > [class^="upperContainer-"] {
             height: 22px;
 
-            &::after{
-              display: none;
-            }
-
-            & > [class^="titleWrapper-"] > [class*="title-"],
-            & > [class^="topic-"] {
-              font-size: 12px;
-              font-weight: normal;
-              color: colors.$Text;
-            }
-
-            & > [class^="divider-"] {
-              display: none;
-            }
-          }
-          & > [class^="toolbar-"] {
-            height: 22px;
-
-            & > [class^="search-"] {
+            & > [class^="children-"] {
               height: 22px;
-              margin: 0 2px;
+
+              &::after{
+                display: none;
+              }
+
+              & > [class^="titleWrapper-"] > [class*="title-"],
+              & > [class^="topic-"] {
+                font-size: 12px;
+                font-weight: normal;
+                color: colors.$Text;
+              }
+
+              & > [class^="divider-"] {
+                display: none;
+              }
+            }
+            & > [class^="toolbar-"] {
+              height: 22px;
+
               & > [class^="search-"] {
                 height: 22px;
-                & > [class^="searchBar-"] {
+                margin: 0 2px;
+                & > [class^="search-"] {
                   height: 22px;
-                  background-color: transparent;
+                  & > [class^="searchBar-"] {
+                    height: 22px;
+                    background-color: transparent;
 
-                  .public-DraftEditorPlaceholder-inner {
+                    .public-DraftEditorPlaceholder-inner {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        [class*="video-"] {
+          margin-bottom: 7px;
+          background-color: transparent;
+
+          &[class*="noChat-"] {
+            margin-bottom: 0 !important;
+          }
+          &[class*="chatSidebarOpen-"] {
+            & > [class^="callContainer-"] {
+              & > [class^="root-"] {
+                box-shadow: styling.$Border;
+                width: 100%;
+              }
+            }
+
+            [class^="channelChatWrapper-"] > [class^="container-"] {
+              border-radius: 0;
+              overflow: visible;
+              background-color: transparent;
+
+              & > section[class*="container-"] {
+                position: absolute;
+                top: -29px;
+                left: -2px;
+                height: 22px;
+                min-height: 22px;
+                width: calc(100% + 4px);
+                background-color: colors.$PropertySheetBG;
+                padding: 0 4px;
+                --channel-icon: #{colors.$Text};
+
+                &::before {
+                  display: none;
+                }
+
+                [class*="iconWrapper-"] {
+                  margin: 0 2px;
+                  display: flex;
+                  align-items: center;
+
+                  & > svg {
+                    width: 16px;
+                    height: 16px;
+                  }
+
+                  & > [class*="count-"] {
                     font-size: 12px;
+                  }
+                }
+
+                & > [class^="upperContainer-"] {
+                  height: 22px;
+
+                  & > [class^="children-"] {
+                    height: 22px;
+
+                    &::after{
+                      display: none;
+                    }
+
+                    & > [class^="titleWrapper-"] > [class*="title-"] {
+                      font-size: 12px;
+                      font-weight: normal;
+                      color: colors.$Text;
+                    }
+
+                    & > [class^="divider-"] {
+                      display: none;
+                    }
+                  }
+                  & > [class^="toolbar-"] {
+                    height: 22px;
+
+                    [class^="divider-"] {
+                      display: none;
+                    }
+                  }
+                }
+              }
+
+              & > [class^="chat-"] {
+                margin-top: 0;
+              }
+            }
+          }
+
+          & > [class^="callContainer-"] {
+            overflow: visible;
+
+            & > [class^="root-"] {
+              box-shadow: styling.$Border;
+              width: calc(100vw - 263px);
+            }
+
+            [class^="videoControls-"] {
+              flex-direction: column-reverse;
+
+              & > [class^="topControls-"] {
+                opacity: 1 !important;
+                transform: none !important;
+                position: absolute;
+                top: -29px;
+                left: -2px;
+                height: 22px;
+                min-height: 22px;
+                background-color: colors.$PropertySheetBG;
+                padding: 0 4px;
+                width: calc(100% - 4px);
+                --channel-icon: #{colors.$Text};
+
+                & > div > [class^="headerWrapper-"] {
+                  margin: 0;
+
+                  & > [class^="title-"],
+                  & > [class^="subtitleContainer-"] > [class*="container-"] {
+                    height: 22px;
+                    min-height: 22px;
+                    background-color: colors.$PropertySheetBG;
+                    padding: 0;
+
+                    [class*="iconWrapper-"] {
+                      margin: 0 2px;
+                      display: flex;
+                      align-items: center;
+
+                      & > svg {
+                        width: 16px;
+                        height: 16px;
+                      }
+
+                      & > [class*="count-"] {
+                        font-size: 12px;
+                      }
+                    }
+
+                    & > [class^="upperContainer-"] {
+                      height: 22px;
+
+                      & > [class^="children-"] {
+                        height: 22px;
+
+                        &::after{
+                          display: none;
+                        }
+
+                        & > [class^="titleWrapper-"] > [class*="title-"],
+                        & > [class^="topic-"] {
+                          font-size: 12px;
+                          font-weight: normal;
+                          color: colors.$Text;
+                        }
+
+                        & > [class^="divider-"] {
+                          display: none;
+                        }
+
+                        & > [class^="container-"] {
+                          & > [class^="divider-"] {
+                            display: none;
+                          }
+
+                          & > [class*="avatar-"] {
+                            width: 16px !important;
+                            height: 16px !important;
+
+                            & > svg {
+                              width: 16px !important;
+                              height: 16px !important;
+                            }
+                          }
+
+                          & > [class*="playingText-"] {
+                            font-size: 12px;
+                          }
+
+                          [class^="viewers-"] {
+                            & > [class*="viewer-"] {
+                              width: 16px !important;
+                              height: 16px !important;
+
+                              & > svg {
+                                width: 16px !important;
+                                height: 16px !important;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      & > [class^="toolbar-"] {
+                        height: 22px;
+
+                        & > div > button[class*="button-"] {
+                          margin-right: 0;
+
+                          [class^="controlIcon-"] {
+                            width: 16px;
+                            height: 16px;
+                          }
+                        }
+
+                        & > [class^="divider-"],
+                        & > div:has(> [class^="disabledButtonWrapper-"]) {
+                          display: none;
+                        }
+
+                        & > [class^="streamQualityIndicator-"] {
+                          margin-right: 0;
+
+                          [class*="liveLarge-"] {
+                            font-size: 12px;
+                          }
+                        }
+
+                        & > [class^="search-"] {
+                          height: 22px;
+                          margin: 0 2px;
+                          & > [class^="search-"] {
+                            height: 22px;
+                            & > [class^="searchBar-"] {
+                              height: 22px;
+                              background-color: transparent;
+
+                              .public-DraftEditorPlaceholder-inner {
+                                font-size: 12px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -239,13 +500,95 @@
 
               [class^="member-"] {
                 background-color: transparent;
+                margin-left: 0;
+              }
+
+              [class^="membersGroup-"] {
+                padding: 0;
+                padding-left: 4px;
+                height: 21px;
+                background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+                line-height: 21px;
+                font-weight: normal;
+                font-size: 12px;
+                color: colors.$Label;
+                text-shadow: styling.$TextShadow;
+                font-weight: normal;
+
+                & > span[aria-hidden="true"] {
+                  display: flex;
+                  align-items: center;
+                }
               }
             }
           }
-          & > [class^="profilePanel-"],
+          & > [class^="profilePanel-"] {
+            margin-left: 7px;
+            box-shadow: styling.$Border;
+          }
           & > [class^="searchResultsWrap-"] {
             margin-left: 7px;
             box-shadow: styling.$Border;
+            background-color: colors.$PropertySheetBG;
+
+            & > [class^="searchHeader-"] {
+              padding: 2px 4px;
+              height: 26px;
+              background: images.$FrameTitle;
+              background-repeat: repeat-x;
+
+              [class^="totalResults-"] > div {
+                color: colors.$LabelDisabled !important;
+                text-shadow: styling.$TextShadow;
+
+                :root.app-focused & {
+                  color: colors.$TextHover !important;
+                }
+              }
+
+              [class^="searchHeaderTabList-"] > [class^="item-"] {
+                padding: 0 4px;
+                margin: 0;
+                border-radius: 0;
+                background: transparent;
+
+                &[class*="selected-"] {
+                  background: colors.$Focus;
+                }
+              }
+            }
+
+            [class^="scroller-"] {
+              padding: 0;
+              padding-right: 0 !important;
+
+              [class^="searchResultGroup-"] {
+                margin: 0;
+
+                [class^="channelNameContainer-"] {
+                  margin: 0;
+                  padding: 0;
+                  padding-left: 4px;
+                  height: 21px;
+                  background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+                  line-height: 21px;
+                  font-weight: normal;
+                  font-size: 12px;
+                  color: colors.$Label;
+                  text-shadow: styling.$TextShadow;
+                  font-weight: normal;
+                }
+
+                [class^="searchResult-"] {
+                  border-radius: 0;
+                  border: 1px solid colors.$BackgroundStart;
+                  background-color: colors.$BackgroundStart;
+                  box-shadow: styling.$BorderInverse;
+                  margin: 3px;
+                  margin-bottom: 5px;
+                }
+              }
+            }
           }
         }
 
@@ -294,6 +637,38 @@
                   min-width: 0 !important;
                   visibility: hidden !important;
                 }
+              }
+            }
+
+            [class^="newMessagesBar-"],
+            [class^="jumpToPresentBar-"] {
+              border-radius: 0;
+              border: 1px solid colors.$BackgroundStart;
+              background-color: colors.$BackgroundStart;
+              background-image: images.$HeaderBG;
+              background-repeat: repeat-x;
+              box-shadow: styling.$BorderInverse;
+              height: 18px;
+              min-height: 18px;
+              left: 3px;
+              padding: 0;
+
+              & > button {
+                height: 18px;
+                line-height: 16px;
+                font-size: 12px;
+                padding: 0 4px;
+              }
+            }
+
+            [class^="newMessagesBar-"] {
+              top: 3px;
+            }
+            [class^="jumpToPresentBar-"] {
+              bottom: 3px;
+
+              [class^="barButtonIcon-"] {
+                margin: 0;
               }
             }
           }
@@ -346,9 +721,25 @@
                 [class^="replyBar-"] {
                   background-color: transparent;
                   border-radius: 0;
+                  display: flex;
+                  flex-direction: row-reverse;
+                  align-self: flex-start;
+
+                  & > [class^="actions-"] {
+                    flex-direction: row-reverse;
+
+                    &::after {
+                      position: relative;
+                      content: "";
+                      background-color: colors.$Divider;
+                      width: 1px;
+                      height: 20px;
+                      left: 100%;
+                    }
+                  }
 
                   [class*="replyLabel-"] {
-                    margin-left: 4px;
+                    margin-left: 8px;
                   }
 
                   [class*="mentionButton-"],
@@ -357,7 +748,7 @@
                   }
 
                   [class^="separator-"] {
-                    display: none;
+                    background-color: colors.$Divider;
                   }
                 }
               }
@@ -390,13 +781,17 @@
               [class^="attachWrapper-"] [class^="attachButton-"] {
                 margin-left: 0;
                 padding-top: 0;
+                padding-bottom: 0;
               }
               [class^="attachButton-"],
               [class^="attachButton-"] > [class^="icon-"] {
                 padding: 5px 8px;
               }
-              [class^="buttons-"] [class*="buttonContainer-"] > button:not(:has(> [class*="innerButton-"])) {
-                margin: 0;
+              [class^="buttons-"] [class*="buttonContainer-"] > button {
+                min-height: 32px !important;
+                &:not(:has(> [class*="innerButton-"])) {
+                  margin: 0;
+                }
               }
               [class^="buttons-"] > [class^="separator-"],
               [class^="buttons-"] > [class^="separator-"] [class*="innerButton-"] {
@@ -450,6 +845,7 @@
           position: absolute;
           top: -29px;
           height: 22px;
+          min-height: 22px;
           background-color: colors.$PropertySheetBG;
           padding: 0 4px;
           --channel-icon: #{colors.$Text};
@@ -473,28 +869,32 @@
             }
           }
 
-          & > [class^="children-"] {
+          & > [class^="upperContainer-"] {
             height: 22px;
 
-            &::after{
-              display: none;
-            }
+            & > [class^="children-"] {
+              height: 22px;
 
-            & > [class^="titleWrapper-"] > [class*="title-"] {
-              font-size: 12px;
-              font-weight: normal;
-              color: colors.$Text;
-            }
+              &::after{
+                display: none;
+              }
 
-            & > [class^="divider-"] {
-              display: none;
-            }
-          }
-          & > [class^="toolbar-"] {
-            height: 22px;
+              & > [class^="titleWrapper-"] > [class*="title-"] {
+                font-size: 12px;
+                font-weight: normal;
+                color: colors.$Text;
+              }
 
-            [class^="divider-"] {
-              display: none;
+              & > [class^="divider-"] {
+                display: none;
+              }
+            }
+            & > [class^="toolbar-"] {
+              height: 22px;
+
+              [class^="divider-"] {
+                display: none;
+              }
             }
           }
         }
@@ -612,6 +1012,62 @@
       border: 1px solid colors.$BackgroundStart;
       background-color: colors.$BackgroundStart;
       box-shadow: styling.$BorderInverse;
+    }
+  }
+}
+
+[class*="recentMentionsPopout-"] {
+  background-color: colors.$PropertySheetBG;
+  border: 1px solid black;
+  border-radius: 0;
+  max-height: calc(100vh - 128px) !important;
+
+  & > [class^="header-"] {
+    height: 26px;
+    min-height: 26px;
+    background: images.$FrameTitle;
+    background-repeat: repeat-x;
+    padding: 0;
+    margin-bottom: 4px;
+
+    & > h1 {
+      padding-top: 3px;
+      padding-left: 8px;
+      font-size: 12px;
+      color: colors.$LabelDisabled;
+      text-shadow: styling.$TextShadow;
+
+      :root.app-focused & {
+        color: colors.$TextHover;
+      }
+    }
+  }
+
+  [class^="messagesPopout-"] {
+    padding-right: 0;
+
+    div[role="list"] {
+      padding: 0;
+
+      [class^="container-"] {
+        padding: 0;
+
+        [class*="channelHeader-"] {
+          height: 21px;
+          background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+          margin: 0;
+          padding-left: 4px;
+        }
+
+        [class^="messageContainer-"] {
+          border-radius: 0;
+          border: 1px solid colors.$BackgroundStart;
+          background-color: colors.$BackgroundStart;
+          box-shadow: styling.$BorderInverse;
+          margin: 3px;
+          margin-bottom: 7px;
+        }
+      }
     }
   }
 }

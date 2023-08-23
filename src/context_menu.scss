@@ -49,9 +49,13 @@
         margin-right: 2px;
       }
 
-      & > [class^="label-"] > [class^="subtext-"] {
-        line-height: 12px;
-        margin-top: 0;
+      & > [class^="label-"] {
+        padding-left: 2px;
+
+        & > [class^="subtext-"] {
+          line-height: 12px;
+          margin-top: 0;
+        }
       }
 
       & > [class^="iconContainer-"],

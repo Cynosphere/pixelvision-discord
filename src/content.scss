@@ -123,29 +123,6 @@
           }
         }
 
-        & > [class^="privateChannels-"] {
-          box-shadow: styling.$Border;
-
-          & > [class^="searchBar-"] {
-            position: absolute;
-            top: -29px;
-            left: -2px;
-            height: 22px;
-            width: 244px;
-            background-color: colors.$PropertySheetBG;
-            padding: 0;
-
-            & > [class^="searchBarComponent-"] {
-              position: fixed;
-              height: 22px;
-              width: 244px;
-              background-color: colors.$PropertySheetBG;
-              font-size: 12px;
-              line-height: 22px;
-            }
-          }
-        }
-
         ul[class^="content-"] {
           & > div[style="height: 84px;"],
           & > div[style="height: 84px;"] + div[style="height: 12px;"],
@@ -486,7 +463,8 @@
             display: none;
           }
 
-          & > [class^="container-"],
+          & > [class^="chatContent-"] + [class^="container-"],
+          & > [class^="container-"] + [class^="container-"],
           & > [class^="membersWrap-"] {
             background: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
@@ -587,6 +565,21 @@
                   margin: 3px;
                   margin-bottom: 5px;
                 }
+              }
+            }
+          }
+          & > [class^="container-"]:first-child {
+            background: colors.$PropertySheetBG;
+            box-shadow: styling.$Border;
+
+            & > [class^="list-"] > [class^="content-"] {
+              padding: 0 8px;
+
+              [class^="card-"][data-item-role="item"] > [class^="container-"] {
+                border: 1px solid colors.$BackgroundStart;
+                background-color: colors.$BackgroundStart;
+                box-shadow: styling.$BorderInverse;
+                border-radius: 0;
               }
             }
           }

@@ -8,6 +8,29 @@
       [class^="sidebar-"] {
 
         & > [class^="privateChannels-"] {
+          box-shadow: styling.$Border;
+
+          & > [class^="searchBar-"] {
+            position: absolute;
+            top: -29px;
+            left: -2px;
+            height: 22px;
+            width: 244px;
+            background-color: colors.$PropertySheetBG;
+            padding: 0;
+            border-radius: 0;
+
+            & > [class^="searchBarComponent-"] {
+              position: fixed;
+              height: 22px;
+              width: 244px;
+              background-color: colors.$PropertySheetBG;
+              font-size: 12px;
+              line-height: 22px;
+              border-radius: 0;
+            }
+          }
+
           & > [class^="scroller-"] {
             background-color: colors.$PropertySheetBG;
 

@@ -2,16 +2,16 @@
 @use "colors";
 @use "styling";
 
-[class*="baseLayer-"] {
+[class*="baseLayer_"] {
   opacity: 1 !important;
   transform: none !important;
 }
-[class^="layer-"]:has([class^="standardSidebarView-"]) {
+[class^="layer_"]:has([class^="standardSidebarView_"]) {
   transform: none !important;
   z-index: 100;
   background: transparent;
 }
-[class^="layer-"] [class^="standardSidebarView-"] {
+[class^="layer_"] [class^="standardSidebarView_"] {
   width: 740px;
   height: 650px;
   left: calc(50vw - 370px);
@@ -21,7 +21,7 @@
   background-color: colors.$DialogBG;
   border: solid 1px black;
 
-  [class^="separator-"] {
+  [class^="separator_"] {
     margin: 4px 2px !important;
     background-color: colors.$Divider !important;
   }
@@ -53,37 +53,41 @@
     }
   }
 
-  & > [class^="sidebarRegion-"] {
+  & > [class^="sidebarRegion_"] {
     flex: 1 0 180px;
 
-    [class^="sidebar-"] {
+    [class^="sidebar_"] {
       width: 164px;
       padding: 0;
 
-      [class*="item-"] {
+      [class*="item_"] {
         font-size: 12px;
         padding: 2px 8px;
         border-radius: 0px;
         margin: 0;
         color: colors.$Text2;
 
-        &:hover:not([class*="selected-"]) {
+        &:hover:not([class*="selected_"]) {
           background-color: transparent !important;
           color: colors.$Text;
         }
 
-        &[class*="selected-"] {
+        &[class*="selected_"] {
           color: colors.$TextSelected !important;
           background-color: colors.$Focus;
         }
       }
 
-      [class*="header-"] {
+      [class*="header_"] {
         padding: 0;
         height: 21px;
-        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+        background: linear-gradient(
+          to right,
+          colors.$DialogBGL,
+          transparent 75%
+        );
 
-        & > [class*="headerText-"] {
+        & > [class*="headerText_"] {
           line-height: 21px;
           margin-left: 4px;
           color: colors.$Label;
@@ -92,16 +96,16 @@
       }
     }
 
-    & > [class^="sidebarRegionScroller-"] {
+    & > [class^="sidebarRegionScroller_"] {
       background: transparent !important;
     }
   }
 
-  & > [class^="contentRegion-"] {
+  & > [class^="contentRegion_"] {
     border: solid 1px colors.$Divider;
     background: colors.$PropertySheetBG;
 
-    [class^="contentRegionScroller-"] {
+    [class^="contentRegionScroller_"] {
       background: transparent;
     }
 
@@ -109,7 +113,7 @@
       max-width: 520px;
       padding: 20px;
 
-      [class^="sectionTitle-"] {
+      [class^="sectionTitle_"] {
         border: 1px solid colors.$BackgroundStart;
         background-color: colors.$BackgroundStart;
         background-image: images.$HeaderBG;
@@ -124,7 +128,7 @@
           color: colors.$GameDetails;
         }
 
-        & + [class^="children-"] {
+        & + [class^="children_"] {
           padding: 8px;
           margin-top: 5px;
           border: 1px solid colors.$BackgroundStart;
@@ -134,16 +138,16 @@
       }
     }
 
-    [class^="toolsContainer-"] {
+    [class^="toolsContainer_"] {
       padding: 0;
       margin: 0;
       position: absolute;
 
-      [class^="keybind-"] {
+      [class^="keybind_"] {
         display: none;
       }
 
-      [class^="closeButton-"] {
+      [class^="closeButton_"] {
         position: absolute;
         right: -544px;
         top: -32px;

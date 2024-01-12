@@ -1,148 +1,148 @@
 html:not(.a11y-font-scaled-down)
-  [class*="message-"]:not([class*="systemMessage-"]):not([class*="compact-"]),
+  [class*="message_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
 html:not(.a11y-font-scaled-down)
-  [class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"],
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"],
 html:not(.a11y-font-scaled-down)
-  [class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="container-"]:not([class*="systemMessage-"]):not(
-    [class*="compact-"]
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="container_"]:not([class*="systemMessage_"]):not(
+    [class*="compact_"]
   ) {
   padding: 0 !important;
   padding-left: 8px !important;
 }
 
-[class*="message-"]:not([class*="systemMessage-"]):not([class*="compact-"]),
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"]:not([class*="systemMessage-"]):not([class*="compact-"]),
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="container-"]:not([class*="systemMessage-"]):not(
-    [class*="compact-"]
+[class*="message_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="systemMessage_"]):not([class*="compact_"]),
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="container_"]:not([class*="systemMessage_"]):not(
+    [class*="compact_"]
   ) {
   padding-left: 8px !important;
 }
 
-[class*="message-"][class*="systemMessage-"] {
+[class*="message_"][class*="systemMessage_"] {
   padding-left: 16px !important;
 }
 
-[class*="message-"][class*="systemMessage-"] [class^="iconContainer-"] {
+[class*="message_"][class*="systemMessage_"] [class^="iconContainer_"] {
   margin-right: 0;
   width: 24px;
 }
 
 html:not(.a11y-font-scaled-down)
-  [class*="message-"]:not([class*="compact-"])
-  > [class^="contents-"]
-  > [class^="header-"],
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"],
 html:not(.a11y-font-scaled-down)
-  [class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"]:not([class*="compact-"])
-  > [class^="contents-"]
-  > [class^="header-"],
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"],
 html:not(.a11y-font-scaled-down)
-  [class*="message-"]:not([class*="compact-"])
-  > [class^="wrapper-"]
-  > [class^="contents-"]
-  > [class^="header-"] {
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  > [class^="header_"] {
   padding-left: 0 !important;
   margin-left: 24px;
   padding-bottom: 0 !important;
 }
 
 .a11y-font-scaled-down
-  [class*="message-"]:not([class*="compact-"])
-  > [class^="contents-"]
-  > [class^="header-"],
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"],
 .a11y-font-scaled-down
-  [class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"]:not([class*="compact-"])
-  > [class^="contents-"]
-  > [class^="header-"]
+  [class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]:not([class*="compact_"])
+  > [class^="contents_"]
+  > [class^="header_"]
   .a11y-font-scaled-down
-  [class*="message-"]:not([class*="compact-"])
-  > [class^="wrapper-"]
-  > [class^="contents-"]
-  > [class^="header-"] {
+  [class*="message_"]:not([class*="compact_"])
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  > [class^="header_"] {
   margin-left: calc(24px - 4.5rem);
 }
 
-[class*="message-"]
-  > [class^="wrapper-"]
-  > [class^="contents-"]
-  [class^="avatar-"],
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"]
-  > [class^="contents-"]
-  [class^="avatar-"],
-[class*="message-"] > [class^="contents-"] [class^="avatar-"] {
+[class*="message_"]
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  [class^="avatar_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  [class^="avatar_"],
+[class*="message_"] > [class^="contents_"] [class^="avatar_"] {
   width: 20px;
   height: 20px;
   left: 8px;
 }
 
-[class*="message-"]
-  > [class^="wrapper-"]
-  > [class^="contents-"]
-  [class^="avatar-"] {
+[class*="message_"]
+  > [class^="wrapper_"]
+  > [class^="contents_"]
+  [class^="avatar_"] {
   left: 0 !important;
 }
 
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  > [class^="wrapper-"]
-  > [class^="contents-"],
-[class*="message-"] > [class^="contents-"],
-[class*="message-"] > [class^="wrapper-"] > [class^="contents-"] {
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  > [class^="wrapper_"]
+  > [class^="contents_"],
+[class*="message_"] > [class^="contents_"],
+[class*="message_"] > [class^="wrapper_"] > [class^="contents_"] {
   margin-left: 0;
   padding: 0;
 }
 
-[class*="message-"][class*="systemMessage-"] > [class^="container-"] {
+[class*="message_"][class*="systemMessage_"] > [class^="container_"] {
   padding: 0;
 }
 
-[class*="cozy-"][class*="hasThread-"]::after {
+[class*="cozy_"][class*="hasThread_"]::after {
   display: none;
 }
 
-[class*="message-"] > [class^="wrapper-"] {
+[class*="message_"] > [class^="wrapper_"] {
   padding-left: 0;
 }
 
-[class^="messagesWrapper-"] [class^="scrollerInner-"]:after {
+[class^="messagesWrapper_"] [class^="scrollerInner_"]:after {
   height: 4px !important;
 }
 
-[class*="message-"]:not([class*="compact-"])
-  [class^="contents-"]
-  [class*="timestampVisibleOnHover-"] {
+[class*="message_"]:not([class*="compact_"])
+  [class^="contents_"]
+  [class*="timestampVisibleOnHover_"] {
   display: none;
 }
 
-[class^="messagesWrapper-"] [class^="scrollerInner-"] [class^="divider-"] {
+[class^="messagesWrapper_"] [class^="scrollerInner_"] [class^="divider_"] {
   margin: 4px;
   height: 8px;
 }
 
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  [class*="groupStart-"][class*="cozy-"] {
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class*="groupStart_"][class*="cozy_"] {
   margin-top: 8px;
 }
 
-div[class*="cozyMessage-"] div[class^="repliedMessage-"] {
+div[class*="cozyMessage_"] div[class^="repliedMessage_"] {
   margin-left: 33px;
 }
 
-div[class*="cozyMessage-"] div[class^="repliedMessage-"]:before {
+div[class*="cozyMessage_"] div[class^="repliedMessage_"]:before {
   --avatar-size: 20px;
   border-left: var(--spine-width) solid var(--interactive-active);
   border-bottom: 0 solid var(--interactive-active);
@@ -150,9 +150,9 @@ div[class*="cozyMessage-"] div[class^="repliedMessage-"]:before {
   border-top: var(--spine-width) solid var(--interactive-active);
 }
 
-[class*="cozyMessage-"] [class^="avatarDecoration-"] {
+[class*="cozyMessage_"] [class^="avatarDecoration_"] {
   margin-top: calc(24px - 20px * var(--decoration-to-avatar-ratio));
-  left: calc(38px - 20px * var(--decoration-to-avatar-ratio));
+  left: calc(30px - 20px * var(--decoration-to-avatar-ratio));
   width: calc(20px * var(--decoration-to-avatar-ratio));
   height: calc(20px * var(--decoration-to-avatar-ratio));
 }

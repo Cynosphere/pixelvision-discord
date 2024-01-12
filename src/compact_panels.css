@@ -1,30 +1,30 @@
-section[class^="panels-"] > [class*="activityPanel-"] [class^="gameIcon-"],
-section[class^="panels-"]
-  > [class*="activityPanel-"]
-  [class^="actions-"]
-  > [class^="panelButtonContainer-"]
+section[class^="panels_"] > [class*="activityPanel_"] [class^="gameIcon_"],
+section[class^="panels_"]
+  > [class*="activityPanel_"]
+  [class^="actions_"]
+  > [class^="panelButtonContainer_"]
   > button,
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class*="directionRow-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class*="directionRow_"]
   > button,
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="actionButtons-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="actionButtons_"]
   button {
   width: 24px;
   height: 24px;
   min-height: 24px;
 }
 
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class*="directionRow-"] {
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class*="directionRow_"] {
   position: absolute;
   bottom: 8px;
   right: 8px;
@@ -33,99 +33,99 @@ section[class^="panels-"]
   grid-auto-flow: column;
 }
 
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div {
   padding-left: 20px;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"] {
+  > [class^="rtcConnectionStatus_"] {
   position: absolute;
   left: 8px;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]:has(> :nth-child(2)) {
+  > [class^="rtcConnectionStatus_"]:has(> :nth-child(2)) {
   top: 12px;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]
-  > svg[class^="ping-"] {
+  > [class^="rtcConnectionStatus_"]
+  > svg[class^="ping_"] {
   margin-right: 0;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]
-  > [class^="labelWrapper-"],
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+  > [class^="rtcConnectionStatus_"]
+  > [class^="labelWrapper_"],
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]
-  > [class^="labelWrapper-"]
+  > [class^="rtcConnectionStatus_"]
+  > [class^="labelWrapper_"]
   > button {
   width: 16px;
   height: 16px;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]
-  > [class^="labelWrapper-"] {
+  > [class^="rtcConnectionStatus_"]
+  > [class^="labelWrapper_"] {
   position: relative;
   left: -16px;
   z-index: 10;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="connection-"]
-  > [class^="inner-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="connection_"]
+  > [class^="inner_"]
   > div
-  > [class^="rtcConnectionStatus-"]
-  > [class^="labelWrapper-"]
+  > [class^="rtcConnectionStatus_"]
+  > [class^="labelWrapper_"]
   > button
-  > [class^="contents-"] {
+  > [class^="contents_"] {
   display: none;
 }
 
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="actionButtons-"]
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="actionButtons_"]
   button {
   padding: 0;
 }
-section[class^="panels-"]
-  > [class^="wrapper-"]
-  > [class^="container-"]
-  > [class*="actionButtons-"] {
+section[class^="panels_"]
+  > [class^="wrapper_"]
+  > [class^="container_"]
+  > [class*="actionButtons_"] {
   grid-gap: 4px;
   padding-top: 0;
   grid-template-columns: repeat(auto-fill, minmax(0, 24px));

@@ -4,41 +4,41 @@
 @import url("https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css");
 
 :root {
-	--HSL-server-icon-size: 32px;
-	--HSL-server-spacing: 8px;
-	--HSL-server-direction: column;
-	--HSL-server-alignment: flex-start;
+  --HSL-server-icon-size: 32px;
+  --HSL-server-spacing: 8px;
+  --HSL-server-direction: column;
+  --HSL-server-alignment: flex-start;
   --server-container: 40px !important;
 }
 
-#app-mount [class*="baseLayer-"] > [class^="container-"] {
+#app-mount [class*="baseLayer_"] > [class^="container_"] {
   background-color: colors.$PropertySheetBG;
   background-image: images.$ClientHeader;
   background-position-y: -32px;
   background-repeat: repeat-x;
 
-  [class^="base-"] {
+  [class^="base_"] {
     overflow: visible;
   }
 
-  [class*="guilds-"] {
+  [class*="guilds_"] {
     background-color: transparent;
     height: calc(100vw - 232px) !important;
 
-    [class*="listItem-"] {
-      &:not([class*="listItemWrapper-"]) {
+    [class*="listItem_"] {
+      &:not([class*="listItemWrapper_"]) {
         margin: 0 !important;
         margin-left: 4px !important;
       }
 
-      &:hover [class^="pill-"] {
+      &:hover [class^="pill_"] {
         display: none;
 
         span {
           opacity: 0 !important;
         }
       }
-      [class^="pill-"] {
+      [class^="pill_"] {
         width: 32px !important;
         height: 32px !important;
         top: 0px !important;
@@ -63,7 +63,7 @@
         }
       }
 
-      &:not(:hover) [class^="pill-"] span {
+      &:not(:hover) [class^="pill_"] span {
         opacity: 0 !important;
 
         &[style^="opacity: 0.7"],
@@ -72,20 +72,20 @@
         }
       }
 
-      [class^="upperBadge-"] {
+      [class^="upperBadge_"] {
         z-index: 500;
       }
 
-      [class^="lowerBadge-"] > [class^="numberBadge-"] {
+      [class^="lowerBadge_"] > [class^="numberBadge_"] {
         background-color: colors.$Highlight1 !important;
         z-index: 500;
       }
 
-      [class^="wrapper-"] > [class^="childWrapper-"] {
+      [class^="wrapper_"] > [class^="childWrapper_"] {
         background-color: transparent;
       }
 
-      [class^="circleIconButton-"] {
+      [class^="circleIconButton_"] {
         background-color: transparent;
 
         &:hover {
@@ -94,16 +94,15 @@
       }
     }
 
-    [class^="blobContainer-"]:hover:not([class*="selected-"]) {
-      & > [class^="wrapper-"] {
+    [class^="blobContainer_"]:hover:not([class*="selected_"]) {
+      & > [class^="wrapper_"] {
         filter: drop-shadow(0 0 4px colors.$Text) !important;
       }
     }
 
-    [class^="blobContainer-"][class*="selected-"],
-    [class^="listItemWrapper-"][class*="selected-"] {
-
-      & > [class^="wrapper-"] {
+    [class^="blobContainer_"][class*="selected_"],
+    [class^="listItemWrapper_"][class*="selected_"] {
+      & > [class^="wrapper_"] {
         filter: drop-shadow(0 0 4px white);
       }
 
@@ -119,17 +118,17 @@
       }
     }
 
-    [class^="blobContainer-"]:has([class^="numberBadge-"]) {
-      & > [class^="wrapper-"] {
+    [class^="blobContainer_"]:has([class^="numberBadge_"]) {
+      & > [class^="wrapper_"] {
         filter: drop-shadow(0 0 4px colors.$Highlight1) !important;
       }
     }
 
-    [class^="listItemWrapper-"] [class^="wrapper-"] {
-      & > [class^="childWrapper-"] {
+    [class^="listItemWrapper_"] [class^="wrapper_"] {
+      & > [class^="childWrapper_"] {
         background-color: transparent;
 
-        & > svg[class^="homeIcon-"] {
+        & > svg[class^="homeIcon_"] {
           width: 37.5px;
           height: 37.5px;
           background-image: images.$HomeIcon;
@@ -141,22 +140,22 @@
           }
         }
       }
-      &[class*="selected-"] {
+      &[class*="selected_"] {
         &:hover {
           filter: drop-shadow(0 0 4px colors.$Text) !important;
         }
 
-        & > [class^="childWrapper-"] > svg[class^="homeIcon-"] {
+        & > [class^="childWrapper_"] > svg[class^="homeIcon_"] {
           background-image: images.$HomeIconHover;
         }
       }
     }
 
-    [class^="guildSeparator-"] {
+    [class^="guildSeparator_"] {
       display: none;
     }
 
-    [class^="scroller-"] {
+    [class^="scroller_"] {
       padding: 0;
 
       &::-webkit-scrollbar,
@@ -170,7 +169,7 @@
   }
 }
 
-[class^="panels-"] > [class^="container-"] {
+[class^="panels_"] > [class^="container_"] {
   position: absolute;
   right: -5px;
   top: -45px;
@@ -180,7 +179,7 @@
   flex-direction: row-reverse;
   background-color: transparent;
 
-  & > [class^="avatarWrapper-"] {
+  & > [class^="avatarWrapper_"] {
     height: 34px;
     max-width: 124px;
     flex-direction: row-reverse;
@@ -192,10 +191,13 @@
       background-color: colors.$darkblue;
     }
 
-    & > [class^="nameTag-"] {
+    & > [class^="nameTag_"] {
       text-align: right;
 
-      & > [class^="panelSubtextContainer-"] > [class*="subtext-"] > [class^="hoverRoll"] {
+      &
+        > [class^="panelSubtextContainer_"]
+        > [class*="subtext_"]
+        > [class^="hoverRoll"] {
         text-align: right;
       }
     }

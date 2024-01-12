@@ -2,67 +2,67 @@
 @use "images";
 @use "styling";
 
-[class^="base-"]
-  > [class^="content-"]
-  > [class^="sidebar-"]
-  > [class^="container-"] {
+[class^="base_"]
+  > [class^="content_"]
+  > [class^="sidebar_"]
+  > [class^="container_"] {
   background-color: colors.$PropertySheetBG;
 
-  [class^="sectionDivider-"] {
+  [class^="sectionDivider_"] {
     margin: 4px 2px !important;
     background-color: colors.$Divider !important;
   }
 
-  [class^="spineBorder-"] {
+  [class^="spineBorder_"] {
     display: none;
   }
 
-  [class^="containerDefault-"] {
+  [class^="containerDefault_"] {
     margin-left: 0;
     padding: 0;
 
-    [class^="spine-"] {
+    [class^="spine_"] {
       display: none;
     }
 
-    [class^="iconVisibility-"] {
+    [class^="iconVisibility_"] {
       margin-left: 0;
       padding: 0;
 
-      [class^="link-"] {
+      [class^="link_"] {
         border-radius: 0;
         padding: 2px 4px;
         --channel-icon: #{colors.$LabelDisabled};
 
-        [class^="icon-"] {
+        [class^="icon_"] {
           width: 16px;
           height: 16px;
         }
 
-        [class^="iconContainer-"] {
+        [class^="iconContainer_"] {
           margin-right: 3px;
         }
 
-        [class^="name-"] {
+        [class^="name_"] {
           font-size: 12px;
           color: colors.$LabelDisabled;
           line-height: 16px;
           font-weight: normal;
         }
 
-        [class^="channelInfo-"] {
-          & > [class^="wrapper-"] {
+        [class^="channelInfo_"] {
+          & > [class^="wrapper_"] {
             border-radius: 0;
             line-height: 16px;
             height: 16px;
 
-            & > [class^="users-"] {
+            & > [class^="users_"] {
               background-color: transparent;
               color: colors.$Text;
               padding-right: 6px;
               width: unset;
             }
-            & > [class^="total-"] {
+            & > [class^="total_"] {
               background-color: transparent;
               color: colors.$LabelDisabled;
               padding: 0;
@@ -83,67 +83,71 @@
         }
       }
 
-      &[class*="modeSelected-"] {
-        [class^="link-"] {
+      &[class*="modeSelected_"] {
+        [class^="link_"] {
           background-color: colors.$Focus;
           --channel-icon: white;
 
-          [class^="name-"] {
+          [class^="name_"] {
             color: white;
           }
         }
       }
-      &[class*="modeUnread-"] {
-        [class^="link-"] {
+      &[class*="modeUnread_"] {
+        [class^="link_"] {
           --channel-icon: #{colors.$Text};
-          [class^="name-"] {
+          [class^="name_"] {
             color: colors.$Text;
           }
         }
-        &:hover [class^="link-"] {
+        &:hover [class^="link_"] {
           --channel-icon: white !important;
-          [class^="name-"] {
+          [class^="name_"] {
             color: white !important;
           }
         }
       }
-      &[class*="modeMuted-"] {
-        [class^="link-"] {
+      &[class*="modeMuted_"] {
+        [class^="link_"] {
           --channel-icon: #{colors.$ScrollGlyphDisabled};
           --interactive-muted: #{colors.$ScrollGlyphDisabled};
-          [class^="name-"] {
+          [class^="name_"] {
             color: colors.$ScrollGlyphDisabled;
           }
         }
       }
-      &:hover:not([class*="modeSelected-"]) {
-        [class^="link-"] {
+      &:hover:not([class*="modeSelected_"]) {
+        [class^="link_"] {
           background-color: transparent;
           --channel-icon: #{colors.$Label};
           --interactive-muted: #{colors.$Label};
-          [class^="name-"] {
+          [class^="name_"] {
             color: colors.$Label;
           }
         }
       }
 
-      &[class*="clickable-"] {
+      &[class*="clickable_"] {
         height: 21px;
-        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+        background: linear-gradient(
+          to right,
+          colors.$DialogBGL,
+          transparent 75%
+        );
 
         &:hover {
-          [class^="mainContent-"] > svg {
+          [class^="mainContent_"] > svg {
             background-position-x: 16px;
           }
         }
 
-        &[class*="collapsed-"] {
-          [class^="mainContent-"] > svg {
+        &[class*="collapsed_"] {
+          [class^="mainContent_"] > svg {
             background-position-y: 0px;
           }
         }
 
-        [class^="mainContent-"] {
+        [class^="mainContent_"] {
           height: 21px;
 
           & > svg {
@@ -161,7 +165,7 @@
             }
           }
 
-          [class^="name-"] {
+          [class^="name_"] {
             line-height: 21px;
             font-weight: normal;
             font-size: 12px;
@@ -171,9 +175,9 @@
           }
         }
 
-        [class^="addButton-"] {
+        [class^="addButton_"] {
           min-width: 20px;
-          [class^="addButtonIcon-"] {
+          [class^="addButtonIcon_"] {
             width: 16px;
             height: 16px;
             transition: none;
@@ -193,88 +197,106 @@
       }
     }
 
-    [class^="link-"] {
+    [class^="link_"] {
       border-radius: 0;
       padding: 2px 4px;
       --channel-icon: #{colors.$LabelDisabled};
 
-      [class^="icon-"] {
+      [class^="icon_"] {
         width: 16px;
         height: 16px;
       }
 
-      [class^="iconContainer-"] {
+      [class^="iconContainer_"] {
         margin-right: 3px;
       }
 
-      [class^="name-"] {
+      [class^="name_"] {
         font-size: 12px;
         color: colors.$LabelDisabled;
         line-height: 16px;
         font-weight: normal;
       }
+
+      & > [class^="linkBottom_"] {
+        margin-left: 0;
+      }
+
+      [class^="mentionsBadge_"] > [class^="numberBadge_"] {
+        background-color: colors.$Highlight1 !important;
+      }
     }
 
-    &[class*="modeSelected-"] {
-      [class^="link-"] {
+    &:has([class^="mentionsBadge_"]) {
+      [class^="link_"] {
+        --channel-icon: #{colors.$Highlight1} !important;
+        --interactive-muted: #{colors.$Highlight1} !important;
+        [class^="name_"] {
+          color: colors.$Highlight1 !important;
+        }
+      }
+    }
+
+    &[class*="modeSelected_"] {
+      [class^="link_"] {
         background-color: colors.$Focus;
         --channel-icon: white;
 
-        [class^="name-"] {
+        [class^="name_"] {
           color: white;
         }
       }
     }
-    &[class*="modeUnread-"] {
-      [class^="link-"] {
+    &[class*="modeUnread_"] {
+      [class^="link_"] {
         --channel-icon: #{colors.$Text};
-        [class^="name-"] {
+        [class^="name_"] {
           color: colors.$Text;
         }
       }
-      &:hover [class^="link-"] {
+      &:hover [class^="link_"] {
         --channel-icon: white;
-        [class^="name-"] {
+        [class^="name_"] {
           color: white !important;
         }
       }
     }
-    &:hover:not([class*="modeSelected-"]):not([class*="selected-"]) {
-      [class^="link-"] {
+    &:hover:not([class*="modeSelected_"]):not([class*="selected_"]) {
+      [class^="link_"] {
         background-color: transparent;
         --channel-icon: #{colors.$Label};
-        [class^="name-"] {
+        [class^="name_"] {
           color: colors.$Label;
         }
       }
     }
 
-    & > [class^="list-"] {
+    & > [class^="list_"] {
       padding: 2px 4px;
 
-      & > [class^="draggable-"] {
+      & > [class^="draggable_"] {
         height: unset;
 
-        & > [class^="voiceUser-"] {
+        & > [class^="voiceUser_"] {
           height: unset;
 
-          &:hover > [class^="content-"] {
+          &:hover > [class^="content_"] {
             border-radius: 0;
             background-color: transparent;
           }
 
-          [class^="userAvatar-"] {
+          [class^="userAvatar_"] {
             margin: 0;
             width: 16px;
             height: 16px;
             margin-right: 4px;
           }
 
-          [class*="username-"] {
+          [class*="username_"] {
             font-size: 12px;
           }
 
-          [class^="icons-"] {
+          [class^="icons_"] {
             margin-right: 0;
           }
         }

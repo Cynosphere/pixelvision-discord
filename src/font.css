@@ -5,14 +5,14 @@
   --font-code: "Courier New", monospace;
 }
 
-[class^="markdown-"] [class^="codeInline-"],
-[class^="codeLine-"],
-[class^="codeBlockText-"],
-[class^="durationTimeDisplay-"],
-[class^="durationTimeSeparator-"],
-[class*="after_inlineCode-"],
-[class*="before_inlineCode-"],
-[class^="inlineCode-"],
+[class^="markdown_"] [class^="codeInline_"],
+[class^="codeLine_"],
+[class^="codeBlockText_"],
+[class^="durationTimeDisplay_"],
+[class^="durationTimeSeparator_"],
+[class*="after_inlineCode_"],
+[class*="before_inlineCode_"],
+[class^="inlineCode_"],
 code.inline,
 code,
 .hljs {
@@ -21,13 +21,13 @@ code,
 
 .hljs,
 code.inline,
-[class^="markdown-"] code,
-[class^="markdown-"] [class^="codeInline-"],
-[class^="codeBlockText-"],
-[class^="codeLine-"],
-[class*="after_inlineCode-"],
-[class*="before_inlineCode-"],
-[class^="inlineCode-"],
+[class^="markdown_"] code,
+[class^="markdown_"] [class^="codeInline_"],
+[class^="codeBlockText_"],
+[class^="codeLine_"],
+[class*="after_inlineCode_"],
+[class*="before_inlineCode_"],
+[class^="inlineCode_"],
 .hljs-ansi-control-sequence {
   font-size: 12px !important;
 }

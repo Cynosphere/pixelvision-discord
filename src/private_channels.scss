@@ -2,15 +2,14 @@
 @use "images";
 @use "styling";
 
-[class*="baseLayer-"] > [class^="container-"] {
-  [class^="base-"] {
-    & > [class^="content-"] {
-      [class^="sidebar-"] {
-
-        & > [class^="privateChannels-"] {
+[class*="baseLayer_"] > [class^="container_"] {
+  [class^="base_"] {
+    & > [class^="content_"] {
+      [class^="sidebar_"] {
+        & > [class^="privateChannels_"] {
           box-shadow: styling.$Border;
 
-          & > [class^="searchBar-"] {
+          & > [class^="searchBar_"] {
             position: absolute;
             top: -29px;
             left: -2px;
@@ -20,7 +19,7 @@
             padding: 0;
             border-radius: 0;
 
-            & > [class^="searchBarComponent-"] {
+            & > [class^="searchBarComponent_"] {
               position: fixed;
               height: 22px;
               width: 244px;
@@ -31,30 +30,30 @@
             }
           }
 
-          & > [class^="scroller-"] {
+          & > [class^="scroller_"] {
             background-color: colors.$PropertySheetBG;
 
-            & > [class^="content-"] {
-              & > [class^="channel-"] {
+            & > [class^="content_"] {
+              & > [class^="channel_"] {
                 margin-left: 0;
 
-                & > [class^="interactive-"] {
+                & > [class^="interactive_"] {
                   background-color: transparent;
                   border-radius: 0;
                   padding: 0;
 
-                  &[class*="linkButton-"] {
-                    [class^="link-"] {
-                      & > [class*="layout-"] {
+                  &[class*="linkButton_"] {
+                    [class^="link_"] {
+                      & > [class*="layout_"] {
                         height: 16px;
                         padding: 0;
 
-                        & > [class*="avatar-"] {
+                        & > [class*="avatar_"] {
                           width: 16px;
                           height: 16px;
                           margin-right: 4px;
 
-                          & > [class*="linkButtonIcon-"] {
+                          & > [class*="linkButtonIcon_"] {
                             width: 16px;
                             height: 16px;
                             color: var(--channel-icon);
@@ -64,16 +63,16 @@
                     }
                   }
 
-                  [class^="link-"] {
+                  [class^="link_"] {
                     border-radius: 0;
                     padding: 2px 4px;
                     --channel-icon: #{colors.$LabelDisabled};
 
-                    & > [class*="layout-"] {
+                    & > [class*="layout_"] {
                       height: 32px;
                     }
 
-                    [class^="name-"] {
+                    [class^="name_"] {
                       font-size: 12px;
                       color: colors.$LabelDisabled;
                       line-height: 16px;
@@ -81,21 +80,21 @@
                     }
                   }
 
-                  &[class*="selected-"] {
+                  &[class*="selected_"] {
                     background-color: colors.$Focus;
-                    [class^="link-"] {
+                    [class^="link_"] {
                       --channel-icon: white;
 
-                      [class^="name-"] {
+                      [class^="name_"] {
                         color: white;
                       }
                     }
                   }
-                  &:hover:not([class*="selected-"]) {
-                    [class^="link-"] {
+                  &:hover:not([class*="selected_"]) {
+                    [class^="link_"] {
                       background-color: transparent;
                       --channel-icon: #{colors.$Label};
-                      [class^="name-"] {
+                      [class^="name_"] {
                         color: colors.$Label;
                       }
                     }
@@ -103,14 +102,18 @@
                 }
               }
 
-              & > [class*="privateChannelsHeaderContainer-"] {
+              & > [class*="privateChannelsHeaderContainer_"] {
                 padding: 0;
                 height: 22px;
                 flex-direction: row-reverse;
-                background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+                background: linear-gradient(
+                  to right,
+                  colors.$DialogBGL,
+                  transparent 75%
+                );
                 align-items: center;
 
-                [class^="headerText-"] {
+                [class^="headerText_"] {
                   line-height: 21px;
                   font-weight: normal;
                   font-size: 12px;
@@ -141,7 +144,7 @@
                   background-position-x: 16px;
                 }
 
-                & > [class^="privateChannelRecipientsInviteButtonIcon-"] {
+                & > [class^="privateChannelRecipientsInviteButtonIcon_"] {
                   position: relative;
                   left: 3px;
                   top: 0px;

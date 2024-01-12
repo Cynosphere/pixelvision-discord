@@ -1,8 +1,8 @@
 @use "images";
 @use "colors";
 
-[class*="scroller-"]:not([class*="none-"]),
-[class*="scrollerBase-"]:not([class*="none-"]) {
+[class*="scroller_"]:not([class*="none_"]),
+[class*="scrollerBase_"]:not([class*="none_"]) {
   &::-webkit-scrollbar {
     min-width: 16px;
     width: 16px;

@@ -55,10 +55,10 @@
   }
 }
 
-[class^="app-"] + [class^="container-"] {
+[class^="app_"] + [class^="container_"] {
   background-color: colors.$DialogBG;
 
-  & > [class^="content-"] {
+  & > [class^="content_"] {
     border: 1px solid black;
     width: 382px;
     height: 104px;
@@ -99,18 +99,18 @@
       display: none;
     }
 
-    & > [class^="text-"] {
+    & > [class^="text_"] {
       top: 45px;
       left: 25px;
 
-      & > [class^="tip-"] {
+      & > [class^="tip_"] {
         font-size: 12px;
         line-height: 16px;
         color: colors.$Label;
       }
 
-      & > [class^="tipTitle-"],
-      & > [class^="body-"] {
+      & > [class^="tipTitle_"],
+      & > [class^="body_"] {
         display: none;
       }
     }

@@ -2,26 +2,26 @@
 @use "images";
 @use "styling";
 
-[class*="menu-"] {
+[class*="menu_"] {
   border-radius: 0;
   padding: 2px;
   border: 1px solid colors.$BorderB5;
   background: colors.$MenuBG;
 
-  & > [class^="scroller-"] {
+  & > [class^="scroller_"] {
     padding: 1px 1px 4px 1px !important;
     margin-right: -4px;
 
-    [class^="customItem-"][id^="message-quickreact-"] > [class^="button-"] {
+    [class^="customItem_"][id^="message-quickreact_"] > [class^="button_"] {
       border-radius: 0 !important;
     }
 
-    [class^="separator-"] {
+    [class^="separator_"] {
       margin: 4px 1px;
       border-bottom: 1px solid colors.$DividerL;
       border-top: 1px solid colors.$DividerD;
     }
-    [class^="item-"] {
+    [class^="item_"] {
       border-radius: 0 !important;
       margin: 1px 0;
       padding: 0 2px !important;
@@ -31,48 +31,50 @@
       text-shadow: styling.$TextShadow;
 
       &:hover,
-      &[class*="focused-"] {
+      &[class*="focused_"] {
         color: colors.$TextHoverMenu;
         background-color: colors.$Focus;
       }
 
-      &:not(:has(> [class^="iconContainer-"] > [class^="icon-"])):not(:has(> [class^="iconContainerLeft-"])) {
+      &:not(:has(> [class^="iconContainer_"] > [class^="icon_"])):not(
+          :has(> [class^="iconContainerLeft_"])
+        ) {
         padding-inline-start: 20px !important;
       }
-      &:has(> [class^="iconContainer-"] > [class^="icon-"]) {
+      &:has(> [class^="iconContainer_"] > [class^="icon_"]) {
         flex-direction: row-reverse;
       }
 
-      & > [class^="iconContainer-"]:has(> [class^="icon-"]),
-      & > [class^="iconContainerLeft-"] {
+      & > [class^="iconContainer_"]:has(> [class^="icon_"]),
+      & > [class^="iconContainerLeft_"] {
         margin-left: 0;
         margin-right: 2px;
       }
 
-      & > [class^="label-"] {
+      & > [class^="label_"] {
         padding-left: 2px;
 
-        & > [class^="subtext-"] {
+        & > [class^="subtext_"] {
           line-height: 12px;
           margin-top: 0;
         }
       }
 
-      & > [class^="iconContainer-"],
-      & > [class^="iconContainer-"] > svg {
+      & > [class^="iconContainer_"],
+      & > [class^="iconContainer_"] > svg {
         width: 16px;
         height: 16px;
       }
 
-      & > [class^="hintContainer-"] {
+      & > [class^="hintContainer_"] {
         margin-right: 18px;
       }
 
-      &[aria-haspopup="true"] > [class^="iconContainer-"] > [class^="caret-"] {
+      &[aria-haspopup="true"] > [class^="iconContainer_"] > [class^="caret_"] {
         display: none;
       }
-      &[aria-haspopup="true"] > [class^="iconContainer-"]:before {
-        content:"";
+      &[aria-haspopup="true"] > [class^="iconContainer_"]:before {
+        content: "";
         position: absolute;
         right: -2px;
         top: 0px;
@@ -87,11 +89,14 @@
         -webkit-mask-position: center;
       }
 
-      &[role="menuitemcheckbox"] > [class^="iconContainer-"] > svg[class^="icon-"]{
+      &[role="menuitemcheckbox"]
+        > [class^="iconContainer_"]
+        > svg[class^="icon_"] {
         display: none;
       }
-      &[role="menuitemcheckbox"][aria-checked="true"] > [class^="iconContainer-"]:before {
-        content:"";
+      &[role="menuitemcheckbox"][aria-checked="true"]
+        > [class^="iconContainer_"]:before {
+        content: "";
         position: absolute;
         right: 0px;
         top: 0px;
@@ -106,11 +111,14 @@
         -webkit-mask-position: center;
       }
 
-      &[role="menuitemradio"] > [class^="iconContainer-"] > svg[class^="icon-"]{
+      &[role="menuitemradio"]
+        > [class^="iconContainer_"]
+        > svg[class^="icon_"] {
         display: none;
       }
-      &[role="menuitemradio"][aria-checked="true"] > [class^="iconContainer-"]:before {
-        content:"";
+      &[role="menuitemradio"][aria-checked="true"]
+        > [class^="iconContainer_"]:before {
+        content: "";
         position: absolute;
         right: -1px;
         top: 0px;
@@ -125,7 +133,7 @@
         -webkit-mask-position: center;
       }
 
-      & > [class^="label-"] > [class^="roleRow-"] > [class^="roleCircle-"] {
+      & > [class^="label_"] > [class^="roleRow_"] > [class^="roleCircle_"] {
         width: 12px;
         height: 12px;
         border-radius: 0;
@@ -138,7 +146,7 @@
   }
 }
 
-[class^="submenuPaddingContainer-"] {
+[class^="submenuPaddingContainer_"] {
   padding: 0;
   margin: -4px;
 }

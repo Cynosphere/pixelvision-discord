@@ -9,14 +9,14 @@
   --text-link: #{colors.$Link};
 }
 
-[class*="button-"] {
+[class*="button_"] {
   font-size: 12px;
   height: 24px;
   min-height: 24px;
   padding: 2px 4px;
   border-radius: 0;
 
-  &[class*="lookFilled-"] {
+  &[class*="lookFilled_"] {
     border: 1px solid;
     background: linear-gradient(to bottom, colors.$LightB, colors.$DarkB);
     border-top-color: colors.$BorderB1;
@@ -25,7 +25,11 @@
     border-right-color: colors.$BorderB2;
 
     &:hover {
-      background: linear-gradient(to bottom, colors.$LightBHover, colors.$DarkBHover);
+      background: linear-gradient(
+        to bottom,
+        colors.$LightBHover,
+        colors.$DarkBHover
+      );
       border-top-color: colors.$BorderB3;
       border-left-color: colors.$BorderB3;
       border-bottom-color: colors.$BorderB1;
@@ -34,22 +38,22 @@
   }
 }
 
-[class*="baseLayer-"] > [class^="container-"] {
-  [class^="base-"] {
+[class*="baseLayer_"] > [class^="container_"] {
+  [class^="base_"] {
     padding: 7px;
     background-color: colors.$DialogBG;
 
-    & > [class^="content-"] {
-      [class^="sidebar-"] {
+    & > [class^="content_"] {
+      [class^="sidebar_"] {
         overflow: visible;
         background-color: transparent;
         margin-top: 27px;
         margin-right: 7px;
 
-        & > [class^="container-"][aria-label] {
+        & > [class^="container_"][aria-label] {
           box-shadow: styling.$Border;
 
-          & > [class^="container"][class*="clickable-"] {
+          & > [class^="container"][class*="clickable_"] {
             position: absolute;
             top: -29px;
             left: -2px;
@@ -61,29 +65,29 @@
               padding: 0 4px;
               height: 22px;
 
-              & > [class^="headerContent-"] {
+              & > [class^="headerContent_"] {
                 filter: none;
                 text-shadow: styling.$TextShadow;
 
-                & > [class*="name-"] {
+                & > [class*="name_"] {
                   font-size: 12px;
                   font-weight: normal;
                   padding-left: 4px;
                 }
 
-                & > [class^="guildIconV2Container-"] {
+                & > [class^="guildIconV2Container_"] {
                   margin-right: 4px;
                 }
               }
             }
 
-            & > [class^="animatedContainer-"] {
+            & > [class^="animatedContainer_"] {
               width: 244px;
               height: 22px;
               transform: none !important;
               opacity: 1 !important;
 
-              & > [class^="bannerImage-"] {
+              & > [class^="bannerImage_"] {
                 width: 244px;
                 top: -78px;
                 transform: none !important;
@@ -101,8 +105,7 @@
                   position: absolute;
                   background: linear-gradient(
                     0deg,
-                    transparent 0%
-                    colors.$PropertySheetBG 95%,
+                    transparent 0% colors.$PropertySheetBG 95%
                   );
                 }
               }
@@ -110,32 +113,32 @@
           }
         }
 
-        & > [class^="panels-"] {
+        & > [class^="panels_"] {
           &:has(> :nth-child(3)),
-          &:has(> [class^="wrapper-"]:not(:empty)) {
+          &:has(> [class^="wrapper_"]:not(:empty)) {
             margin-top: 7px;
             background-color: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
           }
-          & > [class^="wrapper-"] > [class^="container-"],
-          & > [class*="activityPanel-"] {
+          & > [class^="wrapper_"] > [class^="container_"],
+          & > [class*="activityPanel_"] {
             background-color: colors.$PropertySheetBG;
           }
         }
 
-        ul[class^="content-"] {
+        ul[class^="content_"] {
           & > div[style="height: 84px;"],
           & > div[style="height: 84px;"] + div[style="height: 12px;"],
           & > div[style="height: 0px;"] + div[style="height: 12px;"],
-          & > [class^="sectionDivider"] + div[style="height: 12px;"]  {
+          & > [class^="sectionDivider"] + div[style="height: 12px;"] {
             height: 0px !important;
           }
 
-          & > [class*="containerWithMargin-"] {
+          & > [class*="containerWithMargin_"] {
             margin-bottom: 4px;
             padding: 0;
 
-            & > [class^="textArea-"] {
+            & > [class^="textArea_"] {
               margin-right: 0;
             }
 
@@ -147,12 +150,12 @@
         }
       }
 
-      [class^="chat-"] {
+      [class^="chat_"] {
         overflow: visible;
         margin-top: 27px;
         background-color: transparent;
 
-        & > [class^="title-"] {
+        & > [class^="title_"] {
           position: absolute;
           top: -29px;
           left: -2px;
@@ -163,7 +166,7 @@
           width: calc(100% + 4px);
           --channel-icon: #{colors.$Text};
 
-          [class*="iconWrapper-"] {
+          [class*="iconWrapper_"] {
             margin: 0 2px;
             display: flex;
             align-items: center;
@@ -173,41 +176,41 @@
               height: 16px;
             }
 
-            & > [class*="count-"] {
+            & > [class*="count_"] {
               font-size: 12px;
             }
           }
 
-          & > [class^="upperContainer-"] {
+          & > [class^="upperContainer_"] {
             height: 22px;
 
-            & > [class^="children-"] {
+            & > [class^="children_"] {
               height: 22px;
 
-              &::after{
+              &::after {
                 display: none;
               }
 
-              & > [class^="titleWrapper-"] > [class*="title-"],
-              & > [class^="topic-"] {
+              & > [class^="titleWrapper_"] > [class*="title_"],
+              & > [class^="topic_"] {
                 font-size: 12px;
                 font-weight: normal;
                 color: colors.$Text;
               }
 
-              & > [class^="divider-"] {
+              & > [class^="divider_"] {
                 display: none;
               }
             }
-            & > [class^="toolbar-"] {
+            & > [class^="toolbar_"] {
               height: 22px;
 
-              & > [class^="search-"] {
+              & > [class^="search_"] {
                 height: 22px;
                 margin: 0 2px;
-                & > [class^="search-"] {
+                & > [class^="search_"] {
                   height: 22px;
-                  & > [class^="searchBar-"] {
+                  & > [class^="searchBar_"] {
                     height: 22px;
                     background-color: transparent;
 
@@ -221,27 +224,27 @@
           }
         }
 
-        [class*="video-"] {
+        [class*="video_"] {
           margin-bottom: 7px;
           background-color: transparent;
 
-          &[class*="noChat-"] {
+          &[class*="noChat_"] {
             margin-bottom: 0 !important;
           }
-          &[class*="chatSidebarOpen-"] {
-            & > [class^="callContainer-"] {
-              & > [class^="root-"] {
+          &[class*="chatSidebarOpen_"] {
+            & > [class^="callContainer_"] {
+              & > [class^="root_"] {
                 box-shadow: styling.$Border;
                 width: 100%;
               }
             }
 
-            [class^="channelChatWrapper-"] > [class^="container-"] {
+            [class^="channelChatWrapper_"] > [class^="container_"] {
               border-radius: 0;
               overflow: visible;
               background-color: transparent;
 
-              & > section[class*="container-"] {
+              & > section[class*="container_"] {
                 position: absolute;
                 top: -29px;
                 left: -2px;
@@ -256,7 +259,7 @@
                   display: none;
                 }
 
-                [class*="iconWrapper-"] {
+                [class*="iconWrapper_"] {
                   margin: 0 2px;
                   display: flex;
                   align-items: center;
@@ -266,59 +269,59 @@
                     height: 16px;
                   }
 
-                  & > [class*="count-"] {
+                  & > [class*="count_"] {
                     font-size: 12px;
                   }
                 }
 
-                & > [class^="upperContainer-"] {
+                & > [class^="upperContainer_"] {
                   height: 22px;
 
-                  & > [class^="children-"] {
+                  & > [class^="children_"] {
                     height: 22px;
 
-                    &::after{
+                    &::after {
                       display: none;
                     }
 
-                    & > [class^="titleWrapper-"] > [class*="title-"] {
+                    & > [class^="titleWrapper_"] > [class*="title_"] {
                       font-size: 12px;
                       font-weight: normal;
                       color: colors.$Text;
                     }
 
-                    & > [class^="divider-"] {
+                    & > [class^="divider_"] {
                       display: none;
                     }
                   }
-                  & > [class^="toolbar-"] {
+                  & > [class^="toolbar_"] {
                     height: 22px;
 
-                    [class^="divider-"] {
+                    [class^="divider_"] {
                       display: none;
                     }
                   }
                 }
               }
 
-              & > [class^="chat-"] {
+              & > [class^="chat_"] {
                 margin-top: 0;
               }
             }
           }
 
-          & > [class^="callContainer-"] {
+          & > [class^="callContainer_"] {
             overflow: visible;
 
-            & > [class^="root-"] {
+            & > [class^="root_"] {
               box-shadow: styling.$Border;
               width: calc(100vw - 263px);
             }
 
-            [class^="videoControls-"] {
+            [class^="videoControls_"] {
               flex-direction: column-reverse;
 
-              & > [class^="topControls-"] {
+              & > [class^="topControls_"] {
                 opacity: 1 !important;
                 transform: none !important;
                 position: absolute;
@@ -331,17 +334,17 @@
                 width: calc(100% - 4px);
                 --channel-icon: #{colors.$Text};
 
-                & > div > [class^="headerWrapper-"] {
+                & > div > [class^="headerWrapper_"] {
                   margin: 0;
 
-                  & > [class^="title-"],
-                  & > [class^="subtitleContainer-"] > [class*="container-"] {
+                  & > [class^="title_"],
+                  & > [class^="subtitleContainer_"] > [class*="container_"] {
                     height: 22px;
                     min-height: 22px;
                     background-color: colors.$PropertySheetBG;
                     padding: 0;
 
-                    [class*="iconWrapper-"] {
+                    [class*="iconWrapper_"] {
                       margin: 0 2px;
                       display: flex;
                       align-items: center;
@@ -351,38 +354,38 @@
                         height: 16px;
                       }
 
-                      & > [class*="count-"] {
+                      & > [class*="count_"] {
                         font-size: 12px;
                       }
                     }
 
-                    & > [class^="upperContainer-"] {
+                    & > [class^="upperContainer_"] {
                       height: 22px;
 
-                      & > [class^="children-"] {
+                      & > [class^="children_"] {
                         height: 22px;
 
-                        &::after{
+                        &::after {
                           display: none;
                         }
 
-                        & > [class^="titleWrapper-"] > [class*="title-"],
-                        & > [class^="topic-"] {
+                        & > [class^="titleWrapper_"] > [class*="title_"],
+                        & > [class^="topic_"] {
                           font-size: 12px;
                           font-weight: normal;
                           color: colors.$Text;
                         }
 
-                        & > [class^="divider-"] {
+                        & > [class^="divider_"] {
                           display: none;
                         }
 
-                        & > [class^="container-"] {
-                          & > [class^="divider-"] {
+                        & > [class^="container_"] {
+                          & > [class^="divider_"] {
                             display: none;
                           }
 
-                          & > [class*="avatar-"] {
+                          & > [class*="avatar_"] {
                             width: 16px !important;
                             height: 16px !important;
 
@@ -392,12 +395,12 @@
                             }
                           }
 
-                          & > [class*="playingText-"] {
+                          & > [class*="playingText_"] {
                             font-size: 12px;
                           }
 
-                          [class^="viewers-"] {
-                            & > [class*="viewer-"] {
+                          [class^="viewers_"] {
+                            & > [class*="viewer_"] {
                               width: 16px !important;
                               height: 16px !important;
 
@@ -409,37 +412,37 @@
                           }
                         }
                       }
-                      & > [class^="toolbar-"] {
+                      & > [class^="toolbar_"] {
                         height: 22px;
 
-                        & > div > button[class*="button-"] {
+                        & > div > button[class*="button_"] {
                           margin-right: 0;
 
-                          [class^="controlIcon-"] {
+                          [class^="controlIcon_"] {
                             width: 16px;
                             height: 16px;
                           }
                         }
 
-                        & > [class^="divider-"],
-                        & > div:has(> [class^="disabledButtonWrapper-"]) {
+                        & > [class^="divider_"],
+                        & > div:has(> [class^="disabledButtonWrapper_"]) {
                           display: none;
                         }
 
-                        & > [class^="streamQualityIndicator-"] {
+                        & > [class^="streamQualityIndicator_"] {
                           margin-right: 0;
 
-                          [class*="liveLarge-"] {
+                          [class*="liveLarge_"] {
                             font-size: 12px;
                           }
                         }
 
-                        & > [class^="search-"] {
+                        & > [class^="search_"] {
                           height: 22px;
                           margin: 0 2px;
-                          & > [class^="search-"] {
+                          & > [class^="search_"] {
                             height: 22px;
-                            & > [class^="searchBar-"] {
+                            & > [class^="searchBar_"] {
                               height: 22px;
                               background-color: transparent;
 
@@ -458,14 +461,14 @@
           }
         }
 
-        & > [class^="content-"] {
+        & > [class^="content_"] {
           &::before {
             display: none;
           }
 
-          & > [class^="chatContent-"] + [class^="container-"],
-          & > [class^="container-"] + [class^="container-"],
-          & > [class^="membersWrap-"] {
+          & > [class^="chatContent_"] + [class^="container_"],
+          & > [class^="container_"] + [class^="container_"],
+          & > [class^="membersWrap_"] {
             background: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
 
@@ -473,19 +476,23 @@
               margin-left: 7px;
             }
 
-            [class^="members-"] {
+            [class^="members_"] {
               background-color: transparent;
 
-              [class^="member-"] {
+              [class^="member_"] {
                 background-color: transparent;
                 margin-left: 0;
               }
 
-              [class^="membersGroup-"] {
+              [class^="membersGroup_"] {
                 padding: 0;
                 padding-left: 4px;
                 height: 21px;
-                background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+                background: linear-gradient(
+                  to right,
+                  colors.$DialogBGL,
+                  transparent 75%
+                );
                 line-height: 21px;
                 font-weight: normal;
                 font-size: 12px;
@@ -493,29 +500,34 @@
                 text-shadow: styling.$TextShadow;
                 font-weight: normal;
 
-                & > span[aria-hidden="true"] {
+                &:not(:has(> [class^="hiddenVisually_"])) {
+                  display: flex;
+                  align-items: center;
+                }
+
+                &:has(> [class^="hiddenVisually_"]) > span[aria-hidden="true"] {
                   display: flex;
                   align-items: center;
                 }
               }
             }
           }
-          & > [class^="profilePanel-"] {
+          & > [class^="profilePanel_"] {
             margin-left: 7px;
             box-shadow: styling.$Border;
           }
-          & > [class^="searchResultsWrap-"] {
+          & > [class^="searchResultsWrap_"] {
             margin-left: 7px;
             box-shadow: styling.$Border;
             background-color: colors.$PropertySheetBG;
 
-            & > [class^="searchHeader-"] {
+            & > [class^="searchHeader_"] {
               padding: 2px 4px;
               height: 26px;
               background: images.$FrameTitle;
               background-repeat: repeat-x;
 
-              [class^="totalResults-"] > div {
+              [class^="totalResults_"] > div {
                 color: colors.$LabelDisabled !important;
                 text-shadow: styling.$TextShadow;
 
@@ -524,31 +536,35 @@
                 }
               }
 
-              [class^="searchHeaderTabList-"] > [class^="item-"] {
+              [class^="searchHeaderTabList_"] > [class^="item_"] {
                 padding: 0 4px;
                 margin: 0;
                 border-radius: 0;
                 background: transparent;
 
-                &[class*="selected-"] {
+                &[class*="selected_"] {
                   background: colors.$Focus;
                 }
               }
             }
 
-            [class^="scroller-"] {
+            [class^="scroller_"] {
               padding: 0;
               padding-right: 0 !important;
 
-              [class^="searchResultGroup-"] {
+              [class^="searchResultGroup_"] {
                 margin: 0;
 
-                [class^="channelNameContainer-"] {
+                [class^="channelNameContainer_"] {
                   margin: 0;
                   padding: 0;
                   padding-left: 4px;
                   height: 21px;
-                  background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+                  background: linear-gradient(
+                    to right,
+                    colors.$DialogBGL,
+                    transparent 75%
+                  );
                   line-height: 21px;
                   font-weight: normal;
                   font-size: 12px;
@@ -557,7 +573,7 @@
                   font-weight: normal;
                 }
 
-                [class^="searchResult-"] {
+                [class^="searchResult_"] {
                   border-radius: 0;
                   border: 1px solid colors.$BackgroundStart;
                   background-color: colors.$BackgroundStart;
@@ -568,14 +584,14 @@
               }
             }
           }
-          & > [class^="container-"]:first-child {
+          & > [class^="container_"]:first-child {
             background: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
 
-            & > [class^="list-"] > [class^="content-"] {
+            & > [class^="list_"] > [class^="content_"] {
               padding: 0 8px;
 
-              [class^="card-"][data-item-role="item"] > [class^="container-"] {
+              [class^="card_"][data-item-role="item"] > [class^="container_"] {
                 border: 1px solid colors.$BackgroundStart;
                 background-color: colors.$BackgroundStart;
                 box-shadow: styling.$BorderInverse;
@@ -585,23 +601,26 @@
           }
         }
 
-        [class^="chatContent-"] {
+        [class^="chatContent_"] {
           background-color: transparent;
 
-          & > [class^="messagesWrapper-"] {
+          & > [class^="messagesWrapper_"] {
             background-color: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
             margin-bottom: 15px;
 
-            [class^="message-"]{
-              &[class*="mentioned-"] {
-                background-color: color.adjust(colors.$Highlight1, $alpha: -0.9);
+            [class^="message_"] {
+              &[class*="mentioned_"] {
+                background-color: color.adjust(
+                  colors.$Highlight1,
+                  $alpha: -0.9
+                );
                 &:before {
                   background-color: colors.$Highlight1;
                 }
               }
-              &[class*="replying-"],
-              &[class*="ephemeral-"] {
+              &[class*="replying_"],
+              &[class*="ephemeral_"] {
                 background-color: color.adjust(colors.$Focus, $alpha: -0.5);
                 &:before {
                   background-color: color.adjust(colors.$Focus, $alpha: 0.4);
@@ -609,17 +628,17 @@
               }
             }
 
-            [class^="divider-"] > [class^="content-"] {
+            [class^="divider_"] > [class^="content_"] {
               background-color: colors.$PropertySheetBG;
             }
 
-            [class^="channelTextArea-"] {
+            [class^="channelTextArea_"] {
               width: calc(100% - 4px);
               border-radius: 0;
               background-color: colors.$PropertySheetBG;
               box-shadow: styling.$Border;
 
-              & > [class^="scrollableContainer-"] {
+              & > [class^="scrollableContainer_"] {
                 background-color: transparent;
                 border-radius: 0;
 
@@ -633,8 +652,8 @@
               }
             }
 
-            [class^="newMessagesBar-"],
-            [class^="jumpToPresentBar-"] {
+            [class^="newMessagesBar_"],
+            [class^="jumpToPresentBar_"] {
               border-radius: 0;
               border: 1px solid colors.$BackgroundStart;
               background-color: colors.$BackgroundStart;
@@ -654,19 +673,19 @@
               }
             }
 
-            [class^="newMessagesBar-"] {
+            [class^="newMessagesBar_"] {
               top: 3px;
             }
-            [class^="jumpToPresentBar-"] {
+            [class^="jumpToPresentBar_"] {
               bottom: 3px;
 
-              [class^="barButtonIcon-"] {
+              [class^="barButtonIcon_"] {
                 margin: 0;
               }
             }
           }
 
-          & > [class^="form-"] {
+          & > [class^="form_"] {
             padding: 0;
             background-color: transparent;
 
@@ -674,7 +693,7 @@
               display: none;
             }
 
-            & > [class^="channelTextArea-"] {
+            & > [class^="channelTextArea_"] {
               background-color: transparent;
               border-radius: 0;
               margin-bottom: 31px;
@@ -690,7 +709,7 @@
                 box-shadow: styling.$Border;
               }
 
-              & > [class^="scrollableContainer-"] {
+              & > [class^="scrollableContainer_"] {
                 border-radius: 0;
                 background-color: colors.$PropertySheetBG;
                 box-shadow: styling.$Border;
@@ -704,21 +723,21 @@
                 }
               }
 
-              [class^="attachedBars-"] {
+              [class^="attachedBars_"] {
                 background-color: colors.$PropertySheetBG;
                 box-shadow: styling.$Border;
                 border-radius: 0;
                 margin-bottom: 7px;
                 margin-top: 5px;
 
-                [class^="replyBar-"] {
+                [class^="replyBar_"] {
                   background-color: transparent;
                   border-radius: 0;
                   display: flex;
                   flex-direction: row-reverse;
                   align-self: flex-start;
 
-                  & > [class^="actions-"] {
+                  & > [class^="actions_"] {
                     flex-direction: row-reverse;
 
                     &::after {
@@ -731,76 +750,85 @@
                     }
                   }
 
-                  [class*="replyLabel-"] {
+                  [class*="replyLabel_"] {
                     margin-left: 8px;
                   }
 
-                  [class*="mentionButton-"],
-                  [class*="closeButton-"] {
+                  [class*="mentionButton_"],
+                  [class*="closeButton_"] {
                     padding: 2px 4px;
                   }
 
-                  [class^="separator-"] {
+                  [class^="separator_"] {
                     background-color: colors.$Divider;
                   }
                 }
               }
 
-              [class^="inner-"] {
+              [class^="inner_"] {
                 padding-left: 0 !important;
               }
 
-              [class^="inner-"],
-              [class^="buttons-"],
-              [class^="attachWrapper-"],
-              [class^="attachButton-"],
-              & > [class^="scrollableContainer-"],
-              [class^="inner-"] > [class^="textArea-"] {
+              [class^="inner_"],
+              [class^="buttons_"],
+              [class^="attachWrapper_"],
+              [class^="attachButton_"],
+              & > [class^="scrollableContainer_"],
+              [class^="inner_"] > [class^="textArea_"] {
                 min-height: 32px !important;
               }
 
-              [class^="buttons-"],
-              [class^="attachWrapper-"],
-              [class^="attachButton-"] {
+              [class^="buttons_"],
+              [class^="attachWrapper_"],
+              [class^="attachButton_"] {
                 height: 32px !important;
               }
-              [class^="inner-"] > [class^="textArea-"] {
+              [class^="inner_"] > [class^="textArea_"] {
                 height: 32px;
               }
 
-              [class^="attachWrapper-"] {
+              [class^="attachWrapper_"] {
                 min-width: 32px;
               }
-              [class^="attachWrapper-"] [class^="attachButton-"] {
+              [class^="attachWrapper_"] [class^="attachButton_"] {
                 margin-left: 0;
                 padding-top: 0;
                 padding-bottom: 0;
               }
-              [class^="attachButton-"],
-              [class^="attachButton-"] > [class^="icon-"] {
+              [class^="attachButton_"],
+              [class^="attachButton_"] > [class^="icon_"] {
                 padding: 5px 8px;
               }
-              [class^="buttons-"] [class*="buttonContainer-"] > button {
+              [class^="buttons_"] [class*="buttonContainer_"] > button {
                 min-height: 32px !important;
-                &:not(:has(> [class*="innerButton-"])) {
+                &:not(:has(> [class*="innerButton_"])) {
                   margin: 0;
                 }
               }
-              [class^="buttons-"] > [class^="separator-"],
-              [class^="buttons-"] > [class^="separator-"] [class*="innerButton-"] {
+              [class^="buttons_"] > [class^="separator_"],
+              [class^="buttons_"]
+                > [class^="separator_"]
+                [class*="innerButton_"] {
                 margin-left: 4px;
               }
-              [class^="buttons-"] > [class^="separator-"] [class*="innerButton-"] {
+              [class^="buttons_"]
+                > [class^="separator_"]
+                [class*="innerButton_"] {
                 margin-right: 0;
               }
 
-              & > [class^="scrollableContainer-"] > [class^="inner-"] > [class^="textArea-"] > div > [class*="fontSize16Padding-"] {
+              &
+                > [class^="scrollableContainer_"]
+                > [class^="inner_"]
+                > [class^="textArea_"]
+                > div
+                > [class*="fontSize16Padding_"] {
                 padding-top: 4px !important;
                 padding-bottom: 4px !important;
               }
             }
 
-            & > [class^="typing-"] {
+            & > [class^="typing_"] {
               bottom: 0;
               left: 0;
               right: 4px;
@@ -808,33 +836,32 @@
             }
           }
 
-          [class^="scrollerSpacer-"] {
+          [class^="scrollerSpacer_"] {
             height: 8px;
           }
         }
-
       }
 
-      [class^="resizeHandle-"] {
+      [class^="resizeHandle_"] {
         background-color: transparent;
       }
 
-      & > [class^="container-"] {
+      & > [class^="container_"] {
         overflow: visible;
         margin-top: 27px;
         background-color: transparent;
         width: calc(100vw - 263px);
 
-        &:not([style^="width: "]) > section[class*="container-"] {
+        &:not([style^="width: "]) > section[class*="container_"] {
           width: calc(100vw - 261px);
           top: -2px;
         }
 
-        &[style^="width: "] > [class^="chat-"] {
+        &[style^="width: "] > [class^="chat_"] {
           margin-top: 0 !important;
         }
 
-        & > section[class*="container-"] {
+        & > section[class*="container_"] {
           position: absolute;
           top: -29px;
           height: 22px;
@@ -847,7 +874,7 @@
             display: none;
           }
 
-          [class*="iconWrapper-"] {
+          [class*="iconWrapper_"] {
             margin: 0 2px;
             display: flex;
             align-items: center;
@@ -857,71 +884,71 @@
               height: 16px;
             }
 
-            & > [class*="count-"] {
+            & > [class*="count_"] {
               font-size: 12px;
             }
           }
 
-          & > [class^="upperContainer-"] {
+          & > [class^="upperContainer_"] {
             height: 22px;
 
-            & > [class^="children-"] {
+            & > [class^="children_"] {
               height: 22px;
 
-              &::after{
+              &::after {
                 display: none;
               }
 
-              & > [class^="titleWrapper-"] > [class*="title-"] {
+              & > [class^="titleWrapper_"] > [class*="title_"] {
                 font-size: 12px;
                 font-weight: normal;
                 color: colors.$Text;
               }
 
-              & > [class^="divider-"] {
+              & > [class^="divider_"] {
                 display: none;
               }
             }
-            & > [class^="toolbar-"] {
+            & > [class^="toolbar_"] {
               height: 22px;
 
-              [class^="divider-"] {
+              [class^="divider_"] {
                 display: none;
               }
             }
           }
         }
 
-        & > [class*="scrollerBase-"] {
+        & > [class*="scrollerBase_"] {
           background-color: colors.$PropertySheetBG;
           box-shadow: styling.$Border;
 
-          [class^="stickyHeader-"] {
+          [class^="stickyHeader_"] {
             background-color: colors.$PropertySheetBG;
           }
         }
 
-        & > [class^="tabBody-"] {
+        & > [class^="tabBody_"] {
           overflow: visible;
 
           &::before {
             display: none;
           }
 
-          & > [class*="peopleColumn-"] {
+          & > [class*="peopleColumn_"] {
             background-color: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
           }
 
-          & > [class*="nowPlayingColumn-"] {
+          & > [class*="nowPlayingColumn_"] {
             margin-left: 7px;
             background-color: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
 
-            & > [class^="container-"] {
+            & > [class^="container_"] {
               background-color: transparent;
 
-              & > [class^="scroller-"] {
+              & > [class^="scroller_"] {
                 border-left: none;
               }
             }
@@ -929,12 +956,12 @@
         }
       }
 
-      & > [class^="applicationStore-"] {
+      & > [class^="applicationStore_"] {
         margin-top: 27px;
         background-color: transparent;
         box-shadow: styling.$Border;
 
-        section[class*="container-"] {
+        section[class*="container_"] {
           position: absolute;
           top: -2px;
           height: 22px;
@@ -947,20 +974,20 @@
             display: none;
           }
 
-          & > [class^="children-"] {
+          & > [class^="children_"] {
             height: 22px;
 
-            &::after{
+            &::after {
               display: none;
             }
 
-            & > [class^="titleWrapper-"] > [class*="title-"] {
+            & > [class^="titleWrapper_"] > [class*="title_"] {
               font-size: 12px;
               font-weight: normal;
               color: colors.$Text;
             }
 
-            & > [class^="divider-"] {
+            & > [class^="divider_"] {
               display: none;
             }
           }
@@ -970,13 +997,13 @@
   }
 }
 
-[class^="messagesPopoutWrap-"] {
+[class^="messagesPopoutWrap_"] {
   background-color: colors.$PropertySheetBG;
   border: 1px solid black;
   border-radius: 0;
   max-height: calc(100vh - 128px) !important;
 
-  & > [class^="header-"] {
+  & > [class^="header_"] {
     height: 26px;
     min-height: 26px;
     background: images.$FrameTitle;
@@ -997,10 +1024,10 @@
     }
   }
 
-  [class^="messagesPopout-"] {
+  [class^="messagesPopout_"] {
     padding-right: 8px !important;
 
-    [class^="messageGroupWrapper-"] {
+    [class^="messageGroupWrapper_"] {
       border-radius: 0;
       border: 1px solid colors.$BackgroundStart;
       background-color: colors.$BackgroundStart;
@@ -1009,13 +1036,13 @@
   }
 }
 
-[class*="recentMentionsPopout-"] {
+[class*="recentMentionsPopout_"] {
   background-color: colors.$PropertySheetBG;
   border: 1px solid black;
   border-radius: 0;
   max-height: calc(100vh - 128px) !important;
 
-  & > [class^="header-"] {
+  & > [class^="header_"] {
     height: 26px;
     min-height: 26px;
     background: images.$FrameTitle;
@@ -1036,23 +1063,27 @@
     }
   }
 
-  [class^="messagesPopout-"] {
+  [class^="messagesPopout_"] {
     padding-right: 0;
 
     div[role="list"] {
       padding: 0;
 
-      [class^="container-"] {
+      [class^="container_"] {
         padding: 0;
 
-        [class*="channelHeader-"] {
+        [class*="channelHeader_"] {
           height: 21px;
-          background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+          background: linear-gradient(
+            to right,
+            colors.$DialogBGL,
+            transparent 75%
+          );
           margin: 0;
           padding-left: 4px;
         }
 
-        [class^="messageContainer-"] {
+        [class^="messageContainer_"] {
           border-radius: 0;
           border: 1px solid colors.$BackgroundStart;
           background-color: colors.$BackgroundStart;
@@ -1065,20 +1096,20 @@
   }
 }
 
-[class^="browser-"] {
+[class^="browser_"] {
   background-color: colors.$PropertySheetBG;
   border: 1px solid black;
   border-radius: 0;
   max-height: calc(100vh - 128px) !important;
 
-  & > [class^="header-"] {
+  & > [class^="header_"] {
     height: 26px;
     min-height: 26px;
     background: images.$FrameTitle;
     background-repeat: repeat-x;
     padding: 0;
 
-    & > [class^="threadIcon-"] {
+    & > [class^="threadIcon_"] {
       height: 16px;
       width: 16px;
       margin-right: 3px;
@@ -1090,8 +1121,8 @@
       }
     }
 
-    & > [class^="divider-"],
-    & > [class^="spacer-"] {
+    & > [class^="divider_"],
+    & > [class^="spacer_"] {
       display: none;
     }
 
@@ -1105,13 +1136,13 @@
       }
     }
 
-    & > [class^="searchBox-"] {
+    & > [class^="searchBox_"] {
       border-radius: 0;
       background-color: colors.$DialogBG;
       border: 1px solid colors.$ScreenB;
     }
 
-    & > [class^="closeIcon-"] {
+    & > [class^="closeIcon_"] {
       width: 16px;
       height: 16px;
       border: none;
@@ -1133,15 +1164,19 @@
   [class^="list"] {
     padding: 0;
 
-    [class^="content-"] {
-      [class*="sectionHeader-"] {
+    [class^="content_"] {
+      [class*="sectionHeader_"] {
         height: 21px;
-        background: linear-gradient(to right, colors.$DialogBGL, transparent 50%);
+        background: linear-gradient(
+          to right,
+          colors.$DialogBGL,
+          transparent 75%
+        );
         margin: 0;
         padding-left: 4px;
       }
 
-      [class^="container-"] {
+      [class^="container_"] {
         border-radius: 0;
         border: 1px solid colors.$BackgroundStart;
         background-color: colors.$BackgroundStart;
@@ -1159,7 +1194,7 @@
   border-radius: 0 !important;
 }
 
-[class^="inputDefault-"] {
+[class^="inputDefault_"] {
   border-radius: 0;
   padding: 2px;
   height: 22px;

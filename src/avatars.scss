@@ -1,103 +1,103 @@
 @use "colors";
 
-[class*="avatar-"],
-[class*="avatar-"] [class*="image-"],
-[class*="callAvatar-"],
-[class*="callAvatar-"] [class*="speaking-"],
-[class*="avatarDefault-"],
-[class*="avatarSpeaking-"],
-[class*="avatar-"] [class*="inner-"],
-[class*="callAvatarVoice-"],
-[class*="callAvatarWrapper-"] [class*="speaking-"],
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  [class^="message-"]
-  [class*="header-"]
-  [class*="avatar-"]
-  [class*="large-"],
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  [class^="message-"]
-  [class*="header-"]
-  [class*="avatar-"]
-  [class*="wrapper-"],
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  [class^="message-"]
-  [class*="contents-"]
-  [class*="avatar-"],
-[class^="messagesWrapper-"]
-  [class^="scrollerInner-"]
-  [class^="wrapper-"]
-  [class*="contents-"]
-  [class*="avatar-"],
-[class^="messageGroupCozy-"] [class*="contents-"] [class*="avatar-"],
-[class*="autocomplete-"]
-  [class*="autocompleteInner-"]
-  [class*="autocompleteRow-"]
-  [class*="content-"]
-  [class*="wrapper-"],
-[class*="guildsWrapper-"]
-  [class*="guilds-"]
-  [class*="guild-"]
-  [class*="guildInner-"],
-div[class^="listItem-"] foreignObject img,
-div[class^="listItem-"] foreignObject a[class^="button-"],
-div[class^="listItem-"] foreignObject [class^="childWrapper-"],
-div[class^="listItem-"] foreignObject [class^="folder-"],
-div[class^="listItem-"] div[class^="wrapperSimple-"],
-[class^="circleIconButton-"],
-[class^="folderIconWrapper-"],
-[class^="avatarContainer-"],
-[class^="executedCommandAvatar-"],
-[class^="folderIconWrapper-"]
-  > [class^="closedFolderIconWrapper-"]
-  > [class^="icon-"],
-[class^="embedAuthorIcon-"] {
+[class*="avatar_"],
+[class*="avatar_"] [class*="image_"],
+[class*="callAvatar_"],
+[class*="callAvatar_"] [class*="speaking_"],
+[class*="avatarDefault_"],
+[class*="avatarSpeaking_"],
+[class*="avatar_"] [class*="inner_"],
+[class*="callAvatarVoice_"],
+[class*="callAvatarWrapper_"] [class*="speaking_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="header_"]
+  [class*="avatar_"]
+  [class*="large_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="header_"]
+  [class*="avatar_"]
+  [class*="wrapper_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="message_"]
+  [class*="contents_"]
+  [class*="avatar_"],
+[class^="messagesWrapper_"]
+  [class^="scrollerInner_"]
+  [class^="wrapper_"]
+  [class*="contents_"]
+  [class*="avatar_"],
+[class^="messageGroupCozy_"] [class*="contents_"] [class*="avatar_"],
+[class*="autocomplete_"]
+  [class*="autocompleteInner_"]
+  [class*="autocompleteRow_"]
+  [class*="content_"]
+  [class*="wrapper_"],
+[class*="guildsWrapper_"]
+  [class*="guilds_"]
+  [class*="guild_"]
+  [class*="guildInner_"],
+div[class^="listItem_"] foreignObject img,
+div[class^="listItem_"] foreignObject a[class^="button_"],
+div[class^="listItem_"] foreignObject [class^="childWrapper_"],
+div[class^="listItem_"] foreignObject [class^="folder_"],
+div[class^="listItem_"] div[class^="wrapperSimple_"],
+[class^="circleIconButton_"],
+[class^="folderIconWrapper_"],
+[class^="avatarContainer_"],
+[class^="executedCommandAvatar_"],
+[class^="folderIconWrapper_"]
+  > [class^="closedFolderIconWrapper_"]
+  > [class^="icon_"],
+[class^="embedAuthorIcon_"] {
   border-radius: 0 !important;
 }
 
-[class*="avatarMasked-"],
-[class*="maskProfile-"],
-[class*="mask-"],
-[class*="avatar-"] svg[class*="mask-"] > foreignObject,
-[class*="avatarWrapper-"] svg[class*="mask-"] > foreignObject,
-[class*="avatarHint-"] > foreignObject,
-[class*="wrapper-"] svg[class*="mask-"] > foreignObject,
-[class*="callAvatarWrapper-"] svg[class*="callAvatarMask-"] > foreignObject,
-div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
-[class^="bannerSVGWrapper-"] > foreignObject,
-[class^="avatarDecoration-"] > foreignObject,
-[class^="viewers-"] > [class*="viewer-"] {
+[class*="avatarMasked_"],
+[class*="maskProfile_"],
+[class*="mask_"],
+[class*="avatar_"] svg[class*="mask_"] > foreignObject,
+[class*="avatarWrapper_"] svg[class*="mask_"] > foreignObject,
+[class*="avatarHint_"] > foreignObject,
+[class*="wrapper_"] svg[class*="mask_"] > foreignObject,
+[class*="callAvatarWrapper_"] svg[class*="callAvatarMask_"] > foreignObject,
+div[class^="listItem_"] [class^="wrapper_"] > svg > foreignObject,
+[class^="bannerSVGWrapper_"] > foreignObject,
+[class^="avatarDecoration_"] > foreignObject,
+[class^="viewers_"] > [class*="viewer_"] {
   mask: none !important;
   mask-image: none !important;
   -webkit-mask-image: none !important;
 }
 
-[class*="avatarHint-"],
-[class*="avatarNormal-"],
-[class*="avatarWrapper-"] [class*="wrapper-"],
-[class*="avatarWrapper-"] [class*="image-"],
-[class*="replyAvatar-"] {
+[class*="avatarHint_"],
+[class*="avatarNormal_"],
+[class*="avatarWrapper_"] [class*="wrapper_"],
+[class*="avatarWrapper_"] [class*="image_"],
+[class*="replyAvatar_"] {
   border: none;
   border-radius: 0 !important;
 }
 
-[class^="userPopout-"] [class*="avatarWrapper-"] > [class^="avatarHint-"] {
+[class^="userPopout_"] [class*="avatarWrapper_"] > [class^="avatarHint_"] {
   display: none;
 }
 
-[class^="userPopout-"]
-  [class*="avatarWrapper-"]
-  > [class^="avatar-"]
+[class^="userPopout_"]
+  [class*="avatarWrapper_"]
+  > [class^="avatar_"]
   > svg
   > foreignObject {
   x: 8px;
 }
 
-[class^="userPopout-"]
-  [class*="avatarWrapper-"]
-  > [class^="avatar-"]
+[class^="userPopout_"]
+  [class*="avatarWrapper_"]
+  > [class^="avatar_"]
   > svg
   > rect {
   x: 0;
@@ -107,14 +107,14 @@ div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
   mask: none !important;
 }
 
-[class^="accountProfileCard-"] [class^="avatar-"] {
+[class^="accountProfileCard_"] [class^="avatar_"] {
   border: 0;
   background-color: transparent;
 }
 
-[class^="avatar-"] > [class^="wrapper-"],
-[class^="wrapper-"][class*="avatar-"],
-[class^="wrapper"][class*="Avatar-"] {
+[class^="avatar_"] > [class^="wrapper_"],
+[class^="wrapper_"][class*="avatar_"],
+[class^="wrapper"][class*="Avatar_"] {
   --status-color: #5e626e;
 
   &:not(:has([mask="url(#svg-mask-avatar-default)"]))::after {
@@ -129,7 +129,7 @@ div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
       inset 0 0 2px 3px colors.$TextH;
   }
   & > svg > rect,
-  & > svg > svg[class^="cursorDefault-"] {
+  & > svg > svg[class^="cursorDefault_"] {
     display: none;
   }
 
@@ -155,4 +155,3 @@ div[class^="listItem-"] [class^="wrapper-"] > svg > foreignObject,
     fill: #d75a5a !important;
   }
 }
-

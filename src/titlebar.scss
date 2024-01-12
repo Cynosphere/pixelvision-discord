@@ -8,13 +8,13 @@
   height: calc(100vh - 2px);
 }
 
-[class^="typeWindows-"] {
+[class^="typeWindows_"] {
   height: 26px !important;
   margin-top: 0;
   background: images.$FrameTitle;
   background-repeat: repeat-x;
 
-  [class^="wordmarkWindows-"] {
+  [class^="wordmarkWindows_"] {
     padding: 0;
 
     & > svg {
@@ -39,7 +39,7 @@
     }
   }
 
-  [class*="winButton-"] {
+  [class*="winButton_"] {
     top: 0;
     height: 16px;
     width: 16px;
@@ -55,7 +55,7 @@
       background-color: transparent;
     }
 
-    &[class*="winButtonClose-"] {
+    &[class*="winButtonClose_"] {
       background-position: 0px 0px;
       margin-right: 3px;
 
@@ -65,7 +65,7 @@
       }
     }
 
-    &[class*="winButtonMinMax-"]:nth-child(4) {
+    &[class*="winButtonMinMax_"]:nth-child(4) {
       background-position: 0px 16px;
 
       &:hover,
@@ -74,7 +74,7 @@
       }
     }
 
-    &[class*="winButtonMinMax-"]:nth-child(3) {
+    &[class*="winButtonMinMax_"]:nth-child(3) {
       background-position: 0px 32px;
 
       &:hover,

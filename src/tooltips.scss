@@ -1,0 +1,30 @@
+@use "colors";
+
+[class^="layerContainer_"] > [class*="layer_"] > [class^="tooltip_"] {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: 1px solid colors.$Divider;
+  background-color: colors.$PropertySheetBG;
+  border-radius: 0;
+  color: colors.$Text;
+  transform: none !important;
+  opacity: 1 !important;
+
+  [class^="tooltipContent_"] {
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  [class^="tooltipPointer_"] {
+    display: none;
+  }
+
+  [class*="rowGuildName_"] {
+    align-items: center;
+  }
+
+  [class^="guildNameText_"] {
+    color: colors.$Text;
+  }
+}

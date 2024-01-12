@@ -127,17 +127,16 @@
     [class^="listItemWrapper_"] [class^="wrapper_"] {
       & > [class^="childWrapper_"] {
         background-color: transparent;
+      }
+      &[data-list-item-id="guildsnav___home"] > [class^="childWrapper_"] > svg {
+        width: 37.5px;
+        height: 37.5px;
+        background-image: images.$HomeIcon;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-        & > svg[class^="homeIcon_"] {
-          width: 37.5px;
-          height: 37.5px;
-          background-image: images.$HomeIcon;
-          background-repeat: no-repeat;
-          background-size: cover;
-
-          & > path {
-            display: none;
-          }
+        & > path {
+          display: none;
         }
       }
       &[class*="selected_"] {
@@ -145,7 +144,9 @@
           filter: drop-shadow(0 0 4px colors.$Text) !important;
         }
 
-        & > [class^="childWrapper_"] > svg[class^="homeIcon_"] {
+        &[data-list-item-id="guildsnav___home"]
+          > [class^="childWrapper_"]
+          > svg {
           background-image: images.$HomeIconHover;
         }
       }

@@ -143,6 +143,16 @@
         margin-right: 2px;
       }
     }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-button:single-button,
+    &::-webkit-scrollbar-track {
+      visibility: hidden !important;
+      width: 4px !important;
+      min-width: 4px !important;
+    }
   }
 }
 

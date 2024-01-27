@@ -54,7 +54,7 @@ div[class^="listItem_"] div[class^="wrapperSimple_"],
   > [class^="closedFolderIconWrapper_"]
   > [class^="icon_"],
 [class^="embedAuthorIcon_"] {
-  border-radius: 0 !important;
+  border-radius: 0% !important;
 }
 
 [class*="avatarMasked_"],
@@ -68,6 +68,7 @@ div[class^="listItem_"] div[class^="wrapperSimple_"],
 div[class^="listItem_"] [class^="wrapper_"] > svg > foreignObject,
 [class^="bannerSVGWrapper_"] > foreignObject,
 [class^="avatarDecoration_"] > foreignObject,
+[class^="avatarDecorationHint_"] > foreignObject,
 [class^="viewers_"] > [class*="viewer_"] {
   mask: none !important;
   mask-image: none !important;
@@ -113,6 +114,7 @@ div[class^="listItem_"] [class^="wrapper_"] > svg > foreignObject,
 }
 
 [class^="avatar_"] > [class^="wrapper_"],
+[class^="avatarHoverTarget_"] > [class^="wrapper_"],
 [class^="wrapper_"][class*="avatar_"],
 [class^="wrapper"][class*="Avatar_"] {
   --status-color: #5e626e;
@@ -128,9 +130,23 @@ div[class^="listItem_"] [class^="wrapper_"] > svg > foreignObject,
     box-shadow: inset 0 0 0 1px var(--status-color), inset 0 0 0 2px black,
       inset 0 0 2px 3px colors.$TextH;
   }
-  & > svg > rect,
-  & > svg > svg[class^="cursorDefault_"] {
-    display: none;
+  & > svg {
+    border-radius: 0% !important;
+
+    & > rect,
+    & > circle,
+    & > svg[class^="cursorDefault_"] {
+      display: none;
+    }
+
+    &[class^="avatarDecoration_"] {
+      z-index: 10;
+      border-radius: 0 !important;
+
+      [class^="avatar_"] {
+        border-radius: 0 !important;
+      }
+    }
   }
 
   &:has(rect[fill="#23a55a"]) {

@@ -466,9 +466,11 @@
             display: none;
           }
 
-          & > [class^="chatContent_"] + [class^="container_"],
-          & > [class^="container_"] + [class^="container_"],
-          & > [class^="membersWrap_"] {
+          & > [class^="container__"] + [class^="container_"],
+          &
+            > [class^="container__"]
+            > [class^="chatContainer_"]
+            > [class^="container_"] {
             background: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
 
@@ -584,7 +586,10 @@
               }
             }
           }
-          & > [class^="container_"]:first-child {
+          &
+            > [class^="container_"]:not(
+              :has(> [class^="chatContainer_"])
+            ):first-child {
             background: colors.$PropertySheetBG;
             box-shadow: styling.$Border;
 

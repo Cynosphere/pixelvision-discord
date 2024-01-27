@@ -93,7 +93,7 @@
           }
         }
       }
-      &[class*="modeUnread_"] {
+      &[class*="modeUnread"] {
         [class^="link_"] {
           --channel-icon: #{colors.$Text};
           [class^="name_"] {
